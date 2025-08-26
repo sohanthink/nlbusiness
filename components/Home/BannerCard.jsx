@@ -6,25 +6,27 @@ import Image from 'next/image'
 
 const BannerCard = () => {
     return (
-        <div className='container grid grid-cols-1 md:grid-cols-3 gap-4 section-padding'>
-            <Card icon={bannercardicon1} iconalt='bannercardicon1' title='Visa Applicants' description='It is long established fact that reader will distracted by the readable content' />
-            <Card icon={bannercardicon2} iconalt='bannercardicon2' title='Immigration Attorneys' description='It is long established fact that reader will distracted by the readable content' />
-            <Card icon={bannercardicon3} iconalt='bannercardicon3' title='Small Business advisor' description='It is long established fact that reader will distracted by the readable content' />
+        <div className='container grid grid-cols-1 md:grid-cols-3 gap-4 section-padding mt-14 md:mt-0'>
+            <Card icon={bannercardicon1} iconalt='bannercardicon1' title='Visa Applicants' description='It is long established fact that reader will distracted by the readable content' index={0} />
+            <Card icon={bannercardicon2} iconalt='bannercardicon2' title='Immigration Attorneys' description='It is long established fact that reader will distracted by the readable content' index={1} />
+            <Card icon={bannercardicon3} iconalt='bannercardicon3' title='Small Business advisor' description='It is long established fact that reader will distracted by the readable content' index={2} />
         </div>
     )
 }
 
 export default BannerCard
 
-export const Card = ({ icon, iconalt, title, description }) => {
+export const Card = ({ icon, iconalt, title, description, index }) => {
+    const isSecondCard = index === 1;
+
     return (
-        <div className='flex justify-between items-center gap-4 group hover:bg-primary p-5 rounded-xl transition-all duration-300'>
-            <div className='w-14 bg-primary group-hover:border-2 group-hover:border-white h-14 flex items-center justify-center rounded-full flex-shrink-0'>
+        <div className={`flex justify-between items-center gap-4 group hover:bg-primary px-4 py-5 md:px-5 md:py-8 rounded-xl transition-all duration-300 ${isSecondCard ? 'bg-primary' : ''}`}>
+            <div className={`w-14 bg-primary group-hover:border-2 group-hover:border-white h-14 flex items-center justify-center rounded-full flex-shrink-0 ${isSecondCard ? 'border-2 border-white' : ''}`}>
                 <Image src={icon} alt={iconalt} width={20} />
             </div>
             <div className='space-y-2'>
-                <h4 className='group-hover:text-white'>{title}</h4>
-                <p className='group-hover:!text-white'>{description}</p>
+                <h4 className={`group-hover:text-white ${isSecondCard ? 'text-white' : ''}`}>{title}</h4>
+                <p className={`group-hover:!text-white ${isSecondCard ? '!text-white' : ''}`}>{description}</p>
             </div>
         </div>
     )
