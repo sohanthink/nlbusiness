@@ -18,7 +18,7 @@ const Solution = () => {
         <div className='relative section-padding'>
             <Image src={solutionbanner} alt='solutionbanner' className='w-full h-full object-cover absolute top-0 left-0 -z-10' />
             <div className='container'>
-                <h2 className='text-center py-10 z-10 md:px-80'>Tailored Solutions for Every Stage of Your Journey</h2>
+                <h2 className='text-center py-14 z-10 md:px-80'>Tailored Solutions for Every Stage of Your Journey</h2>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     <Card src={solution1} heading='Immigration Business Plans' description='To obtain Canadian Permanent Residency, you must apply for and receive a Canada Immigration (Permanent Resident) Visa' link='/solution' />
                     <Card src={solution2} heading='Franchisor Master Business Plans' description='Many people outside Canada mistakenly call a Canada Immigration (Permanent Resident) Visa a "Canada Green Card," ' link='/solution' />

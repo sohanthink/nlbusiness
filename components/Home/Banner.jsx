@@ -11,7 +11,7 @@ const Banner = () => {
     return (
         <section className="h-[90vh] w-full relative">
             <Image src={bottomshape} alt="bottomshape" className="absolute -bottom-36 left-0 -z-10" />
-            <Image src={shape2} alt="bottomshape" className="absolute bottom-24 left-1/3 -z-10 hidden md:block" />
+            <Image src={shape2} alt="bottomshape" className="absolute bottom-16 left-[38%] -z-10 hidden md:block" />
 
             <div className="container flex justify-center items-center h-full">
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center">

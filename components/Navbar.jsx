@@ -221,7 +221,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky w-full top-0 z-50 duration-50 bg-dark" ref={menuRef}>
+        <nav className="bg-white w-full top-0 z-50 duration-50 bg-dark" ref={menuRef}>
             <div className="container mx-auto px-4 lg:px-2">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     {/* Logo - Left Side */}

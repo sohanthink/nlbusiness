@@ -25,7 +25,7 @@ const Built = () => {
                         empowering entrepreneurs through high-stakes challenges
                     </p>
                     <div className="space-y-5">
-                        <div className="flex justify-between gap-5 items-center">
+                        <div className="flex justify-between gap-5 ">
                             <Image src={icon1} alt="icon1" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
                                 <h3 className="font-bold text-xl">Visa Consultation</h3>
@@ -35,7 +35,7 @@ const Built = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-between gap-5 items-center">
+                        <div className="flex justify-between gap-5">
                             <Image src={icon2} alt="icon2" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
                                 <h3 className="font-bold text-xl">Visa Consultation</h3>
