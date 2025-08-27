@@ -1,14 +1,12 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown, FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import logo from "@/public/logo.png";
 import Image from "next/image";
-import { GoChevronRight } from "react-icons/go";
 
-
-const Navbar = () => {
+const Navbar2 = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSubmenu, setActiveSubmenu] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -88,6 +86,7 @@ const Navbar = () => {
     ];
 
     const servicesData = {
+        // Canada Immigration
         canadaImmigration: [
             {
                 title: "Business Idea Selection",
@@ -182,42 +181,55 @@ const Navbar = () => {
                 ],
             },
         ],
+
+        // USA Immigration
         usaImmigration: [
-            { name: "E-2 Business plan", href: "/e-2-business-plan" },
-            { name: "Business plan L-1", href: "/business-plan-l-1" },
-            { name: "Business plan EB2", href: "/business-plan-eb2" },
-            { name: "Compliant EB-5", href: "/compliant-eb-5" },
+            { name: "E-2 Visa Business Plan", href: "/e-2-business-plan" },
+            { name: "L-1 Visa Business Plan", href: "/business-plan-l-1" },
+            { name: "EB-2 NIW Business Plan", href: "/business-plan-eb2" },
+            { name: "EB-5 Business Plan", href: "/compliant-eb-5" },
+            { name: "Regional Center Business Plan", href: "/regional-center-business-plan" },
         ],
+
+        // UK Immigration
+        ukImmigration: [
+            { name: "Innovator Founder Visa Business Plan", href: "/innovator-founder" },
+            { name: "Expansion Worker Visa Business Plan", href: "/expansion-worker" },
+        ],
+
+        // UAE Immigration
+        uaeImmigration: [
+            { name: "Golden Visa Business Plan", href: "/golden-visa" },
+            { name: "Green Visa for Work Business Plan", href: "/green-visa-work" },
+        ],
+
+        // Advisory Services
         advisory: {
             startUp: [
-                { name: "Fueling the Rise", href: "/fueling-the-rise" },
-                { name: "A Pitch Deck", href: "/a-pitch-deck" },
-                { name: "Strategic Business Plan", href: "/strategic-business-plan" },
-                {
-                    name: "Strategic Financial projection",
-                    href: "/strategic-financial-projection",
-                },
+                { name: "Pitch Deck", href: "/pitch-deck" },
+                { name: "Investor Business Plan", href: "/investor-business-plan" },
+                { name: "Financial Model", href: "/financial-model" },
             ],
-            smallBusiness: [
-                {
-                    name: "Blueprints for Small Business",
-                    href: "/blueprints-for-small-business",
-                },
-                { name: "Loan Ready Business", href: "/loan-ready-business" },
-                { name: "SMB Financial", href: "/smb-financial" },
-                { name: "Real Estate Deck", href: "/real-estate-deck" },
-                { name: "Business plan for grant", href: "/business-plan-for-grant" },
+            ma: [
+                { name: "Confidential Information Memo (CIM)", href: "/cim" },
+                { name: "Teaser", href: "/teaser" },
+                { name: "Valuation", href: "/valuation" },
             ],
         },
-        ma: [
-            {
-                name: "Private Company Investment",
-                href: "/privet-company-investment",
-            },
-            { name: "Strategic Teaser", href: "/strategic-teaser" },
-            { name: "Independent Value", href: "/independent-value" },
-            { name: "Market Intelligence", href: "/market-intelligence" },
+
+        // Small Business
+        smallBusiness: [
+            { name: "SBA/Bank Loan Business Plan", href: "/sba-loan-business-plan" },
+            { name: "Financial Model for SMEs", href: "/financial-model-smes" },
+            { name: "Landlord Deck", href: "/landlord-deck" },
+            { name: "Grant Business Plan", href: "/grant-business-plan" },
         ],
+
+        // Other Services
+        otherServices: [
+            { name: "Market Research", href: "/market-research" },
+            { name: "Digital Marketing", href: "/digital-marketing" },
+        ]
     };
 
     return (
@@ -284,33 +296,58 @@ const Navbar = () => {
                                 Service <FaChevronDown className="text-xs" />
                             </Link>
 
-                            {/* Mega Menu*/}
-                            <div className="absolute mt-20 z-40 inset-0 w-full h-full bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6">
-                                <div className="container mx-auto px-8 h-full">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 h-full">
-                                        {/* Left Column - Immigration Services */}
-                                        <div className="space-y-6">
+                            {/* Enhanced Mega Menu - Single View Layout */}
+                            <div className="absolute mt-20 z-40 left-0 w-full bg-white shadow-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-8">
+                                <div className="container mx-auto">
+                                    <div className="grid grid-cols-4 gap-8">
+                                        {/* Column 1: Immigration Services */}
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Immigration Services</h3>
 
-                                            {/* USA Immigration */}
-                                            <div>
-                                                <Link href="/services/usa-immigrations" className="block">
-                                                    <div className="flex items-center gap-2 mb-3 hover:text-red-600 transition-colors duration-200">
-                                                        <div className="w-4 h-4 bg-red-600 rounded-sm flex items-center justify-center">
-                                                            <span className="text-white font-bold text-xs">US</span>
-                                                        </div>
-                                                        <h3 className="text-base font-bold text-gray-900">
-                                                            USA Immigration
-                                                        </h3>
-                                                        <GoChevronRight className="text-gray-400 text-xs" />
-                                                    </div>
-                                                </Link>
-                                                <ul className="space-y-2 ml-6">
+                                            {/* U.S. Immigration */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                                                    <span className="w-5 h-5 bg-blue-600 rounded-sm flex items-center justify-center mr-2">
+                                                        <span className="text-white font-bold text-xs">US</span>
+                                                    </span>
+                                                    U.S. Immigration
+                                                </h4>
+                                                <ul className="space-y-2">
                                                     {servicesData.usaImmigration.map((item) => (
                                                         <li key={item.name}>
                                                             <Link
                                                                 href={item.href}
-                                                                className="text-sm text-gray-700 hover:text-red-600 transition-colors duration-200 block py-1"
+                                                                className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center group/item"
                                                             >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link href="#" className="text-sm text-blue-600 font-medium mt-2 inline-block hover:underline flex items-center">
+                                                            View all <FaArrowRight className="ml-1 text-xs" />
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* UK Immigration */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                                                    <span className="w-5 h-5 bg-red-600 rounded-sm flex items-center justify-center mr-2">
+                                                        <span className="text-white font-bold text-xs">UK</span>
+                                                    </span>
+                                                    UK Immigration
+                                                </h4>
+                                                <ul className="space-y-2">
+                                                    {servicesData.ukImmigration.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                className="text-sm text-gray-700 hover:text-red-600 transition-colors duration-200 flex items-center group/item"
+                                                            >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
                                                                 {item.name}
                                                             </Link>
                                                         </li>
@@ -318,152 +355,104 @@ const Navbar = () => {
                                                 </ul>
                                             </div>
 
-                                            {/* Canada Immigration */}
+                                            {/* UAE Immigration */}
                                             <div>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <div className="w-4 h-4 bg-primary rounded-sm flex items-center justify-center">
-                                                        <span className="text-white font-bold text-xs">CA</span>
-                                                    </div>
-                                                    <h3 className="text-base font-bold text-gray-900">
-                                                        Canada Immigration
-                                                    </h3>
-                                                    <GoChevronRight className="text-gray-400 text-xs" />
-                                                </div>
-                                                <ul className="space-y-2 ml-6">
-                                                    {servicesData.canadaImmigration.map((category, index) => (
-                                                        <li key={index} className="group/category">
-                                                            <div className="flex items-center justify-between cursor-pointer py-1">
-                                                                <span className="text-sm text-gray-700 group-hover/category:text-primary transition-colors duration-200">
-                                                                    {category.title}
-                                                                </span>
-                                                                <GoChevronRight className="text-gray-400 group-hover/category:text-primary group-hover/category:rotate-90 transition-all duration-200 text-xs" />
-                                                            </div>
-
-                                                            {/* Hover menu */}
-                                                            <div className="absolute left-full top-0 w-72 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50">
-                                                                <h5 className="text-sm font-semibold text-gray-900 mb-2 pb-1 border-b border-gray-100">
-                                                                    {category.title}
-                                                                </h5>
-                                                                <ul className="space-y-1">
-                                                                    {category.items.map((item) => (
-                                                                        <li key={item.name}>
-                                                                            <Link
-                                                                                href={item.href}
-                                                                                className="block py-1.5 text-sm text-gray-700 hover:text-primary transition-colors duration-200"
-                                                                            >
-                                                                                {item.name}
-                                                                            </Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-
-
-                                            {/* Canada2 Immigration */}
-                                            <div>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <div className="w-4 h-4 bg-primary rounded-sm flex items-center justify-center">
-                                                        <span className="text-white font-bold text-xs">CA</span>
-                                                    </div>
-                                                    <h3 className="text-base font-bold text-gray-900">
-                                                        Canada Immigration
-                                                    </h3>
-                                                    <GoChevronRight className="text-gray-400 text-xs" />
-                                                </div>
-                                                <ul className="space-y-2 ml-6">
-                                                    {servicesData.canadaImmigration.map((category, index) => (
-                                                        <li key={index} className="group/category">
-                                                            <div className="flex items-center justify-between cursor-pointer py-1">
-                                                                <span className="text-sm text-gray-700 group-hover/category:text-primary transition-colors duration-200">
-                                                                    {category.title}
-                                                                </span>
-                                                                <GoChevronRight className="text-gray-400 group-hover/category:text-primary group-hover/category:rotate-90 transition-all duration-200 text-xs" />
-                                                            </div>
-
-                                                            {/* Hover menu */}
-                                                            <div className="absolute left-full top-0 w-72 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50">
-                                                                <h5 className="text-sm font-semibold text-gray-900 mb-2 pb-1 border-b border-gray-100">
-                                                                    {category.title}
-                                                                </h5>
-                                                                <ul className="space-y-1">
-                                                                    {category.items.map((item) => (
-                                                                        <li key={item.name}>
-                                                                            <Link
-                                                                                href={item.href}
-                                                                                className="block py-1.5 text-sm text-gray-700 hover:text-primary transition-colors duration-200"
-                                                                            >
-                                                                                {item.name}
-                                                                            </Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
+                                                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                                                    <span className="w-5 h-5 bg-green-600 rounded-sm flex items-center justify-center mr-2">
+                                                        <span className="text-white font-bold text-xs">UAE</span>
+                                                    </span>
+                                                    UAE Immigration
+                                                </h4>
+                                                <ul className="space-y-2">
+                                                    {servicesData.uaeImmigration.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 flex items-center group/item"
+                                                            >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                {item.name}
+                                                            </Link>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </div>
                                         </div>
 
-                                        {/* Right Column - Advisory & Other Services */}
-                                        <div className="space-y-6">
-                                            {/* Advisory */}
-                                            <div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-3">
-                                                    Advisory
-                                                </h3>
-                                                <div className="space-y-4">
-                                                    <div>
-                                                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
-                                                            Start-Up
-                                                        </h4>
-                                                        <ul className="space-y-2">
-                                                            {servicesData.advisory.startUp.map((item) => (
-                                                                <li key={item.name}>
-                                                                    <Link
-                                                                        href={item.href}
-                                                                        className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
-                                                                    >
-                                                                        {item.name}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                    <div>
-                                                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
-                                                            M&A
-                                                        </h4>
-                                                        <ul className="space-y-2">
-                                                            {servicesData.ma.map((item) => (
-                                                                <li key={item.name}>
-                                                                    <Link
-                                                                        href={item.href}
-                                                                        className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
-                                                                    >
-                                                                        {item.name}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
+                                        {/* Column 2: Canada Immigration */}
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200 flex items-center">
+                                                <span className="w-5 h-5 bg-red-600 rounded-sm flex items-center justify-center mr-2">
+                                                    <span className="text-white font-bold text-xs">CA</span>
+                                                </span>
+                                                Canada Immigration
+                                            </h3>
+
+                                            {servicesData.canadaImmigration.map((category, index) => (
+                                                <div key={index} className="mb-6">
+                                                    <h4 className="font-semibold text-gray-800 mb-3">{category.title}</h4>
+                                                    <ul className="space-y-2">
+                                                        {category.items.slice(0, 4).map((item) => (
+                                                            <li key={item.name}>
+                                                                <Link
+                                                                    href={item.href}
+                                                                    className="text-sm text-gray-700 hover:text-red-600 transition-colors duration-200 flex items-center group/item"
+                                                                >
+                                                                    <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                    {item.name}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                        {category.items.length > 4 && (
+                                                            <li>
+                                                                <Link href="#" className="text-sm text-blue-600 font-medium mt-2 inline-block hover:underline flex items-center">
+                                                                    View all <FaArrowRight className="ml-1 text-xs" />
+                                                                </Link>
+                                                            </li>
+                                                        )}
+                                                    </ul>
                                                 </div>
-                                            </div>
-                                            {/* Small Business */}
-                                            <div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-3">
-                                                    Small Business
-                                                </h3>
+                                            ))}
+                                        </div>
+
+                                        {/* Column 3: Advisory Services */}
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Advisory</h3>
+
+                                            {/* Start-Up */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-800 mb-3">Start-Up</h4>
                                                 <ul className="space-y-2">
-                                                    {servicesData.advisory.smallBusiness.map((item) => (
+                                                    {servicesData.advisory.startUp.map((item) => (
                                                         <li key={item.name}>
                                                             <Link
                                                                 href={item.href}
-                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                                className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 flex items-center group/item"
                                                             >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link href="#" className="text-sm text-blue-600 font-medium mt-2 inline-block hover:underline flex items-center">
+                                                            View all <FaArrowRight className="ml-1 text-xs" />
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* M&A */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-800 mb-3">M&A</h4>
+                                                <ul className="space-y-2">
+                                                    {servicesData.advisory.ma.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 flex items-center group/item"
+                                                            >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
                                                                 {item.name}
                                                             </Link>
                                                         </li>
@@ -471,6 +460,72 @@ const Navbar = () => {
                                                 </ul>
                                             </div>
 
+                                            {/* Small Business */}
+                                            <div>
+                                                <h4 className="font-semibold text-gray-800 mb-3">Small Business</h4>
+                                                <ul className="space-y-2">
+                                                    {servicesData.smallBusiness.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 flex items-center group/item"
+                                                            >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link href="#" className="text-sm text-blue-600 font-medium mt-2 inline-block hover:underline flex items-center">
+                                                            View all <FaArrowRight className="ml-1 text-xs" />
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        {/* Column 4: Other Services & Contact */}
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Other Services</h3>
+
+                                            {/* Other Services */}
+                                            <div className="mb-6">
+                                                <ul className="space-y-2">
+                                                    {servicesData.otherServices.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center group/item"
+                                                            >
+                                                                <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+
+                                            {/* Master Franchise */}
+                                            <div className="mb-6">
+                                                <h4 className="font-semibold text-gray-800 mb-3">Master Franchise</h4>
+                                                <Link href="#" className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center group/item">
+                                                    <FaArrowRight className="text-xs mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" />
+                                                    Explore Franchise Opportunities
+                                                </Link>
+                                            </div>
+
+                                            {/* Contact Info */}
+                                            <div className="bg-gray-50 p-4 rounded-lg mt-8">
+                                                <h4 className="font-semibold text-gray-800 mb-2">Need Help?</h4>
+                                                <p className="text-sm text-gray-600 mb-3">Our experts are ready to assist you</p>
+                                                <div className="flex items-center text-blue-600 font-medium mb-2">
+                                                    <FaPhoneAlt className="mr-2 text-sm" />
+                                                    <span>1-844 (566-7839)</span>
+                                                </div>
+                                                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm font-medium transition-colors duration-300 mt-2">
+                                                    Become a Partner
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -671,4 +726,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar2;

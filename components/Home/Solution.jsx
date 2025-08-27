@@ -52,10 +52,10 @@ export const Card = ({ src, heading, description, link, }) => {
                     <p>
                         {description}
                     </p>
-                    <Link href={link} className='flex items-center gap-3 font-bold text-black'>
+                    <div className='flex items-center gap-3 font-bold text-black'>
                         <MdKeyboardDoubleArrowRight className='h-10 w-10 bg-primary text-white p-3 text-lg rounded-lg' />
                         Read More
-                    </Link>
+                    </div>
                 </div>
             </div>
         </Link>

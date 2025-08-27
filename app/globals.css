@@ -89,7 +89,7 @@ h6 {
 }
 
 h1 {
-  @apply text-4xl md:text-7xl font-bold text-black;
+  @apply text-4xl md:text-7xl font-bold text-black leading-normal md:leading-[76px];
 }
 
 h2 {

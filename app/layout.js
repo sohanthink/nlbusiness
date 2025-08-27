@@ -2,6 +2,8 @@ import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/common/Footer";
+import Navbar2 from "@/components/Home/Navbar2";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -25,7 +27,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${manrope.variable} ${inter.variable} antialiased`}>
         <Navbar />
+        {/* <Navbar2 /> */}
         {children}
+        <Footer />
         <ScrollToTop />
       </body>
     </html>
