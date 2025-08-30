@@ -7,7 +7,6 @@ import logo from "@/public/logo.png";
 import Image from "next/image";
 import { GoChevronRight } from "react-icons/go";
 
-
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -276,7 +275,7 @@ const Navbar = () => {
                         ))}
 
                         {/* Desktop Services Mega Menu */}
-                        <div className="group">
+                        <div className="group relative">
                             <Link
                                 href={"#"}
                                 className="px-4 py-12 font-semibold text-sm text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
@@ -285,7 +284,7 @@ const Navbar = () => {
                             </Link>
 
                             {/* Mega Menu*/}
-                            <div className="absolute mt-20 z-40 inset-0 w-full h-full bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6">
+                            <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 z-[60] w-screen max-w-7xl bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 overflow-hidden">
                                 <div className="container mx-auto px-8 h-full">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 h-full">
                                         {/* Left Column - Immigration Services */}
@@ -331,7 +330,7 @@ const Navbar = () => {
                                                 </div>
                                                 <ul className="space-y-2 ml-6">
                                                     {servicesData.canadaImmigration.map((category, index) => (
-                                                        <li key={index} className="group/category">
+                                                        <li key={index} className="group/category relative">
                                                             <div className="flex items-center justify-between cursor-pointer py-1">
                                                                 <span className="text-sm text-gray-700 group-hover/category:text-primary transition-colors duration-200">
                                                                     {category.title}
@@ -340,52 +339,7 @@ const Navbar = () => {
                                                             </div>
 
                                                             {/* Hover menu */}
-                                                            <div className="absolute left-full top-0 w-72 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50">
-                                                                <h5 className="text-sm font-semibold text-gray-900 mb-2 pb-1 border-b border-gray-100">
-                                                                    {category.title}
-                                                                </h5>
-                                                                <ul className="space-y-1">
-                                                                    {category.items.map((item) => (
-                                                                        <li key={item.name}>
-                                                                            <Link
-                                                                                href={item.href}
-                                                                                className="block py-1.5 text-sm text-gray-700 hover:text-primary transition-colors duration-200"
-                                                                            >
-                                                                                {item.name}
-                                                                            </Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-
-
-                                            {/* Canada2 Immigration */}
-                                            <div>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <div className="w-4 h-4 bg-primary rounded-sm flex items-center justify-center">
-                                                        <span className="text-white font-bold text-xs">CA</span>
-                                                    </div>
-                                                    <h3 className="text-base font-bold text-gray-900">
-                                                        Canada Immigration
-                                                    </h3>
-                                                    <GoChevronRight className="text-gray-400 text-xs" />
-                                                </div>
-                                                <ul className="space-y-2 ml-6">
-                                                    {servicesData.canadaImmigration.map((category, index) => (
-                                                        <li key={index} className="group/category">
-                                                            <div className="flex items-center justify-between cursor-pointer py-1">
-                                                                <span className="text-sm text-gray-700 group-hover/category:text-primary transition-colors duration-200">
-                                                                    {category.title}
-                                                                </span>
-                                                                <GoChevronRight className="text-gray-400 group-hover/category:text-primary group-hover/category:rotate-90 transition-all duration-200 text-xs" />
-                                                            </div>
-
-                                                            {/* Hover menu */}
-                                                            <div className="absolute left-full top-0 w-72 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50">
+                                                            <div className="absolute left-full top-0 w-64 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50 max-w-xs">
                                                                 <h5 className="text-sm font-semibold text-gray-900 mb-2 pb-1 border-b border-gray-100">
                                                                     {category.title}
                                                                 </h5>
@@ -470,7 +424,6 @@ const Navbar = () => {
                                                     ))}
                                                 </ul>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

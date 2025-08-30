@@ -86,7 +86,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="py-8 md:py-24 bg-[#ECF1F9]">
+        <section className="py-8 md:py-24 bg-[#fefefe]">
 
             <h2 className='text-center pb-5 md:pb-14'>What customer say about us</h2>
             <div className="container">
@@ -111,7 +111,7 @@ const Testimonial = () => {
                     >
                         {testimonials.map((testimonial) => (
                             <SwiperSlide key={testimonial.id}>
-                                <div className="bg-white relative m-5 md:m-0 p-8 rounded-lg h-full flex flex-col mb-10">
+                                <div className="bg-primary/5 relative m-5 md:m-0 p-8 rounded-lg h-full flex flex-col mb-10">
                                     <div className="flex mb-4">
                                         {[...Array(testimonial.rating)].map((_, i) => (
                                             <span key={i} className="text-primary text-3xl"><CiStar />
@@ -122,7 +122,7 @@ const Testimonial = () => {
                                     <p className="text-gray mb-6 flex-grow text-xl">{testimonial.content}</p>
                                     {/* triangle shape */}
                                     <div className="absolute -bottom-12 left-10 w-20 h-12">
-                                        <div className="shape bg-white w-full h-full"></div>
+                                        <div className="shape bg-primary/5 w-full h-full"></div>
                                     </div>
                                     {/* quote */}
                                     <div className="absolute bottom-4 right-8 text-[#2B4DFF54] text-3xl">
