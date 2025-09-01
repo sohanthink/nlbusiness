@@ -1,3 +1,4 @@
+import Subscribe from '@/components/common/Subscribe'
 import Testimonial from '@/components/Home/Testimonial'
 import Rush from '@/components/service/Rush'
 import AllImmigration from '@/components/service/usimmigration/AllImmigration'
@@ -25,6 +26,7 @@ const usaImmigration = () => {
             <VisaPlan />
             <PopularVisa />
             <Consultation />
+            <Subscribe />
         </>
     )
 }

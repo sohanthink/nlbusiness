@@ -182,7 +182,7 @@ const Navbar = () => {
             },
         ],
         usaImmigration: [
-            { name: "E-2 Business plan", href: "/e-2-business-plan" },
+            { name: "E-2 Business plan", href: "/services/usa-immigrations/e2-visa" },
             { name: "Business plan L-1", href: "/business-plan-l-1" },
             { name: "Business plan EB2", href: "/business-plan-eb2" },
             { name: "Compliant EB-5", href: "/compliant-eb-5" },
@@ -444,7 +444,7 @@ const Navbar = () => {
                     {/* Mobile menu button */}
                     <button
                         onClick={toggleMenu}
-                        className="lg:hidden relative p-2 text-white hover:text-gray-300 focus:outline-none transition-colors duration-300 z-50"
+                        className="lg:hidden relative p-2 text-black hover:text-gray-300 focus:outline-none transition-colors duration-300 z-50"
                         aria-label="Toggle mobile menu"
                         aria-expanded={isMenuOpen}
                     >
