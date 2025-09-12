@@ -17,31 +17,26 @@ const Built = () => {
                     />
                 </div>
                 <div className="md:w-1/2 w-full space-y-7 pt-5 md:pt-0">
-                    <h2 className="!text-black">Built for People Like You</h2>
+                    <h2 className="!text-black">Built for Your Success, Backed by Our Expertise</h2>
                     <p className="text-gray">
-                        We are a premier business plan provider with over a decade of
-                        expertise, driving innovation and agility. Our commitment to speed
-                        and precision supports Canada's thriving business community,
-                        empowering entrepreneurs through high-stakes challenges
+                        At NL Immigration, we understand that your application is more than paperwork—it's your future. Our team of expert writers and immigration specialists dedicates itself to crafting personalized, thoroughly researched business plans that meet the strict standards of Canadian immigration officials. We don't use templates; we build convincing narratives.
                     </p>
                     <div className="space-y-5">
                         <div className="flex justify-between gap-5 ">
                             <Image src={icon1} alt="icon1" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Visa Consultation</h3>
+                                <h3 className="font-bold text-xl">Comprehensive Visa Strategy:</h3>
                                 <p className="text-gray">
-                                    Knowledge of technologies rules better than anyone which we
-                                    apply in our daily office working schedule
+                                    We analyze your profile and goals to recommend the strongest possible pathway for your application.
                                 </p>
                             </div>
                         </div>
                         <div className="flex justify-between gap-5">
                             <Image src={icon2} alt="icon2" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Visa Consultation</h3>
+                                <h3 className="font-bold text-xl">Meticulous Document Preparation:</h3>
                                 <p className="text-gray">
-                                    Knowledge of technologies rules better than anyone which we
-                                    apply in our daily office working schedule
+                                    From business plans to letters of intent, every document is crafted for clarity, compliance, and impact.
                                 </p>
                             </div>
                         </div>

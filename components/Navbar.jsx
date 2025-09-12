@@ -11,6 +11,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSubmenu, setActiveSubmenu] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const menuRef = useRef(null);
 
     // Handle responsive behavior
@@ -66,10 +67,16 @@ const Navbar = () => {
     const closeMenu = () => {
         setIsMenuOpen(false);
         setActiveSubmenu(null);
+        setIsMegaMenuOpen(false);
+    };
+
+    const handleMegaMenuItemClick = () => {
+        setIsMegaMenuOpen(false);
     };
 
     const menuItems = [
         { name: "Home", href: "/" },
+        { name: "About Us", href: "/about" },
         {
             name: "Pages",
             href: "#",
@@ -131,32 +138,7 @@ const Navbar = () => {
                     {
                         name: "BC PNP Entrepreneur Stream",
                         href: "/bc-pnp-entrepreneur-stream",
-                    },
-                    {
-                        name: "Manitoba MPNP Business Plan",
-                        href: "/plan-mpnp-entrepreneur-pathway",
-                    },
-                    {
-                        name: "Manitoba MPNP Business Concept",
-                        href: "/concept-mpnp-entrepreneur-pathway",
-                    },
-                    {
-                        name: "Nova Scotia NSNP Business Plan",
-                        href: "/nsnp-business-plan",
-                    },
-                    {
-                        name: "Northwest Territories Business Plan",
-                        href: "/nwt-nominee-program",
-                    },
-                    {
-                        name: "New Brunswick Immigration Stream",
-                        href: "/nb-immigration-stream",
-                    },
-                    { name: "Newfoundland and Labrador PNP", href: "/nl-pnp" },
-                    {
-                        name: "Yukon Entrepreneur Stream",
-                        href: "/yukon-entrepreneur-stream",
-                    },
+                    }
                 ],
             },
             {
@@ -170,22 +152,22 @@ const Navbar = () => {
                         name: "C10 Significant Benefit Work Permit",
                         href: "/c10-significant-benefit-work-permit",
                     },
-                    {
-                        name: "C11 Entrepreneur Work Permit",
-                        href: "/c11-entrepreneur-work-permit",
-                    },
-                    {
-                        name: "FTA-Based Entrepreneurial",
-                        href: "/fta-based-entrepreneurial",
-                    },
                 ],
             },
         ],
+        ukImmigration: [
+            { name: "Innovator Founder Visa Business Plan", href: "/services/uk-immigrations/innovator-founder-visa-business-plan" },
+            { name: "Expansion Worker Visa Business Plan", href: "/services/uk-immigrations/expansion-worker-visa-business-plan" },
+        ],
+        uaeImmigration: [
+            { name: "Golden Visa Business Plan", href: "/services/uae-immigrations/golden-visa-business-plan" },
+            { name: "Green Visa for Work Business Plan", href: "/services/uae-immigrations/green-visa-work-business-plan" },
+        ],
         usaImmigration: [
-            { name: "E-2 Business plan", href: "/services/usa-immigrations/e2-visa" },
-            { name: "Business plan L-1", href: "/business-plan-l-1" },
-            { name: "Business plan EB2", href: "/business-plan-eb2" },
-            { name: "Compliant EB-5", href: "/compliant-eb-5" },
+            { name: "E-2 Business plan", href: "/services/usa-immigrations/e2-visa-business-plan" },
+            { name: "Business plan L-1", href: "/services/usa-immigrations/l1-visa-business-plan" },
+            { name: "Business plan EB2", href: "/services/usa-immigrations/eb2-visa-business-plan" },
+            { name: "Compliant EB-5", href: "/services/usa-immigrations/eb5-visa-business-plan" },
         ],
         advisory: {
             startUp: [
@@ -235,7 +217,7 @@ const Navbar = () => {
                                     alt="logo"
                                     width={60}
                                     height={60}
-                                    className="md:w-[70px] md:h-[70px] shadow-lg hover:shadow-2xl transition-all duration-300"
+                                    className="md:w-[70px] md:h-[70px]"
                                 />
                             </div>
                         </div>
@@ -247,7 +229,7 @@ const Navbar = () => {
                             <div key={item.name} className="relative group">
                                 <Link
                                     href={item.href}
-                                    className="px-4 py-12 font-semibold text-sm text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
+                                    className="px-4 py-12 font-semibold text-base text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
                                 >
                                     {item.name}
                                     {item.submenu && <FaChevronDown className="text-xs" />}
@@ -275,30 +257,33 @@ const Navbar = () => {
                         ))}
 
                         {/* Desktop Services Mega Menu */}
-                        <div className="group relative">
-                            <Link
-                                href={"#"}
-                                className="px-4 py-12 font-semibold text-sm text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
+                        <div className="relative">
+                            <button
+                                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                                onMouseEnter={() => setIsMegaMenuOpen(true)}
+                                className="px-4 py-12 font-semibold text-base text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
                             >
-                                Service <FaChevronDown className="text-xs" />
-                            </Link>
+                                Service <FaChevronDown className={`text-xs transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                            </button>
 
                             {/* Mega Menu*/}
-                            <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 z-[60] w-screen max-w-7xl bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 overflow-hidden">
+                            <div
+                                className={`fixed left-1/2 top-1/2 py-12 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-screen max-w-7xl bg-[#f8fbff] shadow-lg transition-all duration-300 p-6 overflow-hidden ${isMegaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                                onMouseLeave={() => setIsMegaMenuOpen(false)}
+                            >
                                 <div className="container mx-auto px-8 h-full">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 h-full">
-                                        {/* Left Column - Immigration Services */}
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
+                                        {/* Column 1 - Immigration Services */}
                                         <div className="space-y-6">
-
-                                            {/* USA Immigration */}
+                                            {/* U.S. Immigration */}
                                             <div>
                                                 <Link href="/services/usa-immigrations" className="block">
                                                     <div className="flex items-center gap-2 mb-3 hover:text-red-600 transition-colors duration-200">
-                                                        <div className="w-4 h-4 bg-red-600 rounded-sm flex items-center justify-center">
+                                                        <div className="w-4 h-4 bg-red-600 p-3 rounded-sm flex items-center justify-center">
                                                             <span className="text-white font-bold text-xs">US</span>
                                                         </div>
-                                                        <h3 className="text-base font-bold text-gray-900">
-                                                            USA Immigration
+                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
+                                                            U.S. Immigration
                                                         </h3>
                                                         <GoChevronRight className="text-gray-400 text-xs" />
                                                     </div>
@@ -308,121 +293,245 @@ const Navbar = () => {
                                                         <li key={item.name}>
                                                             <Link
                                                                 href={item.href}
+                                                                onClick={handleMegaMenuItemClick}
                                                                 className="text-sm text-gray-700 hover:text-red-600 transition-colors duration-200 block py-1"
                                                             >
                                                                 {item.name}
                                                             </Link>
                                                         </li>
                                                     ))}
+                                                    <li>
+                                                        <Link
+                                                            href="/services/usa-immigrations#all-immigration"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
                                                 </ul>
                                             </div>
 
-                                            {/* Canada Immigration */}
+                                            {/* UK Immigration */}
                                             <div>
-                                                <div className="flex items-center gap-2 mb-3">
-                                                    <div className="w-4 h-4 bg-primary rounded-sm flex items-center justify-center">
-                                                        <span className="text-white font-bold text-xs">CA</span>
+                                                <Link href="/services/uk-immigrations" className="block">
+                                                    <div className="flex items-center gap-2 mb-3 hover:text-blue-600 transition-colors duration-200">
+                                                        <div className="w-4 h-4 bg-blue-600 p-3 rounded-sm flex items-center justify-center">
+                                                            <span className="text-white font-bold text-xs">UK</span>
+                                                        </div>
+                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
+                                                            UK Immigration
+                                                        </h3>
+                                                        <GoChevronRight className="text-gray-400 text-xs" />
                                                     </div>
-                                                    <h3 className="text-base font-bold text-gray-900">
-                                                        Canada Immigration
-                                                    </h3>
-                                                    <GoChevronRight className="text-gray-400 text-xs" />
-                                                </div>
+                                                </Link>
                                                 <ul className="space-y-2 ml-6">
-                                                    {servicesData.canadaImmigration.map((category, index) => (
-                                                        <li key={index} className="group/category relative">
-                                                            <div className="flex items-center justify-between cursor-pointer py-1">
-                                                                <span className="text-sm text-gray-700 group-hover/category:text-primary transition-colors duration-200">
-                                                                    {category.title}
-                                                                </span>
-                                                                <GoChevronRight className="text-gray-400 group-hover/category:text-primary group-hover/category:rotate-90 transition-all duration-200 text-xs" />
-                                                            </div>
-
-                                                            {/* Hover menu */}
-                                                            <div className="absolute left-full top-0 w-64 bg-white shadow-lg border border-gray-200 rounded p-3 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200 z-50 max-w-xs">
-                                                                <h5 className="text-sm font-semibold text-gray-900 mb-2 pb-1 border-b border-gray-100">
-                                                                    {category.title}
-                                                                </h5>
-                                                                <ul className="space-y-1">
-                                                                    {category.items.map((item) => (
-                                                                        <li key={item.name}>
-                                                                            <Link
-                                                                                href={item.href}
-                                                                                className="block py-1.5 text-sm text-gray-700 hover:text-primary transition-colors duration-200"
-                                                                            >
-                                                                                {item.name}
-                                                                            </Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        {/* Right Column - Advisory & Other Services */}
-                                        <div className="space-y-6">
-                                            {/* Advisory */}
-                                            <div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-3">
-                                                    Advisory
-                                                </h3>
-                                                <div className="space-y-4">
-                                                    <div>
-                                                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
-                                                            Start-Up
-                                                        </h4>
-                                                        <ul className="space-y-2">
-                                                            {servicesData.advisory.startUp.map((item) => (
-                                                                <li key={item.name}>
-                                                                    <Link
-                                                                        href={item.href}
-                                                                        className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
-                                                                    >
-                                                                        {item.name}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                    <div>
-                                                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
-                                                            M&A
-                                                        </h4>
-                                                        <ul className="space-y-2">
-                                                            {servicesData.ma.map((item) => (
-                                                                <li key={item.name}>
-                                                                    <Link
-                                                                        href={item.href}
-                                                                        className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
-                                                                    >
-                                                                        {item.name}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/* Small Business */}
-                                            <div>
-                                                <h3 className="text-base font-bold text-gray-900 mb-3">
-                                                    Small Business
-                                                </h3>
-                                                <ul className="space-y-2">
-                                                    {servicesData.advisory.smallBusiness.map((item) => (
+                                                    {servicesData.ukImmigration.map((item) => (
                                                         <li key={item.name}>
                                                             <Link
                                                                 href={item.href}
-                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                                onClick={handleMegaMenuItemClick}
+                                                                className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
                                                             >
                                                                 {item.name}
                                                             </Link>
                                                         </li>
                                                     ))}
                                                 </ul>
+                                            </div>
+
+                                            {/* UAE Immigration */}
+                                            <div>
+                                                <Link href="/services/uae-immigrations" className="block">
+                                                    <div className="flex items-center gap-2 mb-3 hover:text-green-600 transition-colors duration-200">
+                                                        <div className="w-4 h-4 bg-green-600 p-3 rounded-sm flex items-center justify-center">
+                                                            <span className="text-white font-bold text-xs">UAE</span>
+                                                        </div>
+                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
+                                                            UAE Immigration
+                                                        </h3>
+                                                        <GoChevronRight className="text-gray-400 text-xs" />
+                                                    </div>
+                                                </Link>
+                                                <ul className="space-y-2 ml-6">
+                                                    <li>
+                                                        <Link
+                                                            href="/services/uae-immigrations/golden-visa-business-plan"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Golden Visa Business Plan
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/uae-immigrations/green-visa-work-business-plan"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Green Visa for Work Business Plan
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        {/* Column 2 - Advisory Services */}
+                                        <div className="space-y-6">
+                                            <h3 className="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                                Advisory
+                                            </h3>
+
+                                            {/* Start-Up */}
+                                            <div>
+                                                <Link href="/services/advisory/startup" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-green-600 transition-colors duration-200 cursor-pointer">
+                                                        Start-Up
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    {servicesData.advisory.startUp.slice(0, 3).map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                onClick={handleMegaMenuItemClick}
+                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link
+                                                            href="/advisory/startup"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* M&A */}
+                                            <div>
+                                                <Link href="/advisory/ma" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-purple-600 transition-colors duration-200 cursor-pointer">
+                                                        M&A
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    {servicesData.ma.slice(0, 3).map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                onClick={handleMegaMenuItemClick}
+                                                                className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link
+                                                            href="/advisory/ma"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        {/* Column 3 - Small Business */}
+                                        <div className="space-y-6">
+                                            <h3 className="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+                                                Small Business
+                                            </h3>
+                                            <ul className="space-y-2">
+                                                {servicesData.advisory.smallBusiness.map((item) => (
+                                                    <li key={item.name}>
+                                                        <Link
+                                                            href={item.href}
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                                <li>
+                                                    <Link
+                                                        href="/advisory/small-business"
+                                                        onClick={handleMegaMenuItemClick}
+                                                        className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                    >
+                                                        View all →
+                                                    </Link>
+                                                </li>
+                                            </ul>
+
+                                            {/* Social Media Buttons */}
+                                            <div className="mt-6 pt-4 border-t border-gray-200">
+                                                <h4 className="text-sm font-medium text-gray-700 mb-3">Follow Us</h4>
+                                                <div className="flex space-x-2">
+                                                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200">
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors duration-200">
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.665 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.427 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors duration-200">
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200">
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors duration-200">
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Bottom Info Bar */}
+                                    <div className="mt-8 pt-6 border-t border-gray-200">
+                                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                                            <div className="flex items-center gap-3 text-gray-700">
+                                                <span className="text-sm font-medium">We're here to help! Call now:</span>
+                                                <div className="flex items-center gap-2">
+                                                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                                    </svg>
+                                                    <span className="text-sm font-semibold">1-844 (566-7639)</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-px h-6 bg-gray-300"></div>
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-sm text-gray-700">Want to better support your clients?</span>
+                                                    <Link
+                                                        href="/become-partner"
+                                                        onClick={handleMegaMenuItemClick}
+                                                        className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-200"
+                                                    >
+                                                        Become a Partner
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -546,24 +655,37 @@ const Navbar = () => {
                                         }`}
                                 >
                                     <div className="pl-4 py-2 space-y-4">
-                                        {/* Canada Immigration Mobile */}
+                                        {/* UK Immigration Mobile */}
                                         <div>
-                                            <h5 className="text-black mb-2">Canada Immigration</h5>
+                                            <h5 className="text-black mb-2">UK Immigration</h5>
                                             <div className="space-y-1 pl-2">
-                                                {servicesData.canadaImmigration
-                                                    .slice(0, 3)
-                                                    .map((category) =>
-                                                        category.items.slice(0, 2).map((item) => (
-                                                            <Link
-                                                                key={item.name}
-                                                                href={item.href}
-                                                                className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                                                                onClick={closeMenu}
-                                                            >
-                                                                {item.name}
-                                                            </Link>
-                                                        ))
-                                                    )}
+                                                {servicesData.ukImmigration.map((item) => (
+                                                    <Link
+                                                        key={item.name}
+                                                        href={item.href}
+                                                        className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                                                        onClick={closeMenu}
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* UAE Immigration Mobile */}
+                                        <div>
+                                            <h5 className="text-black mb-2">UAE Immigration</h5>
+                                            <div className="space-y-1 pl-2">
+                                                {servicesData.uaeImmigration.map((item) => (
+                                                    <Link
+                                                        key={item.name}
+                                                        href={item.href}
+                                                        className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                                                        onClick={closeMenu}
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                ))}
                                             </div>
                                         </div>
 

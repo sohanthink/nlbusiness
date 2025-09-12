@@ -15,7 +15,7 @@ const AllImmigration = () => {
             id: 1,
             title: "E-2 Visa Business Plan",
             description: "Support your E-2 visa application with a custom-made business plan that meets the requirements.",
-            href: "/e-2-business-plan"
+            href: "/services/usa-immigrations/e2-visa"
         },
         {
             id: 2,
@@ -74,7 +74,7 @@ const AllImmigration = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="w-full py-16 bg-white">
+        <section id="all-immigration" ref={sectionRef} className="w-full py-16 bg-white">
             <div className="container mx-auto px-4 max-w-7xl">
                 {/* Header */}
                 <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-4">

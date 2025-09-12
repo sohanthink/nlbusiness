@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-import banner from "@/public/images/service/servicebanner.png";
 import Button from "@/components/common/Button";
 
 import { FcGoogle } from "react-icons/fc";
@@ -16,7 +15,7 @@ import logo6 from '@/public/images/home/partner/logo6.png'
 
 
 
-const Banner = () => {
+const Banner = ({ title, description, src }) => {
     const partnerLogos = [
         {
             id: 1,
@@ -55,12 +54,9 @@ const Banner = () => {
             <div className="container flex justify-center items-center h-full">
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="w-full md:w-1/2 relative text-center md:text-left">
-                        <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">Empowering
-                            Entrepreneurs in
-                            Their Life Changing
-                            Endeavors.
+                        <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">{title}
                         </h1>
-                        <p className="my-5 md:my-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, amet iusto at voluptate id laborum suscipit aliquam perspiciatis molestiae tenetur voluptatibus in aut, earum vitae itaque sequi ut ad atque obcaecati eos iste quas corporis? </p>
+                        <p className="my-5 md:my-6">{description}</p>
                         <Button link='#' cn='' text='Get Consultation' />
                         <div className="flex items-center gap-3 mt-7 flex-wrap">
                             <FcGoogle className="text-2xl" />
@@ -75,7 +71,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
-                        <Image src={banner} alt="banner" className="w-full md:h-[600px] h-[300px] object-contain" />
+                        <Image src={src} alt="banner" className="w-full md:h-[600px] h-[300px] object-contain" />
                     </div>
                 </div>
             </div>

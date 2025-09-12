@@ -13,6 +13,9 @@ import Why from "@/components/Home/Why";
 import Count from "@/components/Home/Count";
 import Testimonial from "@/components/Home/Testimonial";
 import Subscribe from "@/components/common/Subscribe";
+import WhyNL from "@/components/about/WhyNL";
+import Blog from "@/components/common/Blog";
+import Step from "@/components/service/usimmigration/Step";
 
 const page = () => {
   const bannerCardRef = useRef(null);
@@ -75,6 +78,7 @@ const page = () => {
         <Solution />
       </motion.div>
 
+      <Testimonial />
       <motion.div
         ref={homeVideoRef}
         initial="hidden"
@@ -94,9 +98,11 @@ const page = () => {
       >
         <Team />
       </motion.div>
-      <Why />
+      {/* <Why /> */}
+      <WhyNL />
+      <Step />
       <Count />
-      <Testimonial />
+      <Blog />
       <Subscribe />
     </>
   );

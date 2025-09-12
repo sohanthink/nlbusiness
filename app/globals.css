@@ -175,3 +175,6 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
+.shape {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}

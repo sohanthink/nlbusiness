@@ -9,6 +9,10 @@ const Banner = ({ title, breadcrumb }) => {
             <div className="relative bg-white">
                 <div className="container">
                     <div className="relative z-10">
+                        {/* Main Title */}
+                        <h1 className='py-2'>
+                            {title}
+                        </h1>
                         {/* Breadcrumb Navigation */}
                         <nav className="mb-4">
                             <ol className="flex items-center space-x-2 text-sm text-gray-600">
@@ -22,10 +26,6 @@ const Banner = ({ title, breadcrumb }) => {
                             </ol>
                         </nav>
 
-                        {/* Main Title */}
-                        <h1 className="">
-                            {title}
-                        </h1>
                     </div>
 
                     {/* Background Watermark */}
@@ -33,8 +33,8 @@ const Banner = ({ title, breadcrumb }) => {
                         <Image
                             src={innerpagebannerlogo}
                             alt="Background Logo"
-                            width={600}
-                            className="object-contain w-[600px]"
+                            width={500}
+                            className="object-contain w-[500px]"
                         />
                     </div>
                 </div>

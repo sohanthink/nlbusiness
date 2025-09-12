@@ -30,9 +30,9 @@ const Team = ({ about = false }) => {
     ];
 
     return (
-        <section className="relative section-padding bg-gray-50">
+        <section className="relative section-padding bg-white">
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-50 w-full h-full">
+            <div className="absolute inset-0 opacity-30 w-full h-full">
                 <Image
                     src={teambg}
                     alt="Background pattern"

@@ -11,12 +11,14 @@ import Secret from '@/components/service/usimmigration/Secret'
 import Step from '@/components/service/usimmigration/Step'
 import VisaPlan from '@/components/service/usimmigration/VisaPlan'
 import Why from '@/components/service/usimmigration/Why'
+
 import banner from "@/public/images/service/servicebanner.png";
 
-const usaImmigration = () => {
+
+const StartUp = () => {
     return (
         <>
-            <Banner title="Empowering Entrepreneurs in Their Life Changing Endeavors."
+            <Banner title="Supporting the Growth of Your Start-up"
                 description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, amet iusto at voluptate id laborum suscipit aliquam perspiciatis molestiae tenetur voluptatibus in aut, earum vitae itaque sequi ut ad atque obcaecati eos iste quas corporis? "
                 src={banner}
             />
@@ -35,4 +37,4 @@ const usaImmigration = () => {
     )
 }
 
-export default usaImmigration
+export default StartUp
