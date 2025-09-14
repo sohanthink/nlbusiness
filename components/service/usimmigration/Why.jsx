@@ -14,32 +14,32 @@ const Why = () => {
     const features = [
         {
             id: 1,
-            title: "Custom Plans Built by Experts",
+            title: "Nationwide Program Expertise",
             icon: whyicon1
         },
         {
             id: 2,
-            title: "7 languages - All in House",
+            title: "Province-Specific Strategy",
             icon: whyicon2
         },
         {
             id: 3,
-            title: "Quality Work Delivered Quickly",
+            title: "Rigorous Market Research",
             icon: whyicon3
         },
         {
             id: 4,
-            title: "A Network of 1000+ Partners",
+            title: "IRCC & PNP Compliance",
             icon: whyicon4
         },
         {
             id: 5,
-            title: "Proficient Across 180+ Industries",
+            title: "End-to-End Support",
             icon: whyicon5
         },
         {
             id: 6,
-            title: "98% Customer Satisfaction",
+            title: "Highest Approval Standards",
             icon: whyicon6
         }
     ];
@@ -74,10 +74,11 @@ const Why = () => {
                 <div className="md:w-1/2 w-full space-y-8">
                     <div className="space-y-4">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                            Why Choose Joorney?
+                            Why We Are Canada's Business Immigration Experts
                         </h2>
                         <p className="text-lg text-gray-600 leading-relaxed md:pr-20">
-                            Our team includes professional business writers, project managers, graphic designers, industry experts.                        </p>
+                            Our specialized team combines deep knowledge of Canadian immigration law with extensive business planning expertise. We understand the unique requirements of each province and territory, ensuring your application meets the highest standards for approval.
+                        </p>
                     </div>
 
                     {/* Features List */}

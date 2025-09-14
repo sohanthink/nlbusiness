@@ -5,20 +5,20 @@ const Step = () => {
         {
             id: 1,
             stepId: "STEP_01",
-            title: "Strategy & Onboarding",
-            description: "It all starts with a conversation. We’ll discuss your vision during a free consultation to ensure we're the perfect fit. Once ready, we formalize your journey with a clear agreement and provide a detailed questionnaire to capture your unique story."
+            title: "Discover & Strategize",
+            description: "We dive deep into your objectives, whether for immigration or business growth. We then outline the optimal strategy and provide a clear project plan and timeline."
         },
         {
             id: 2,
             stepId: "STEP_02",
-            title: "Expert Drafting & Collaboration",
-            description: "This is where our expertise comes to life. Our specialists craft your compelling business plan and supporting documents. You’ll receive the first draft for your review, and we work closely with you to refine every detail until it perfectly represents your vision."
+            title: "Analyze & Develop",
+            description: "Our experts conduct thorough market research and financial modeling. We draft your plan and engage in a collaborative review process, refining every detail with your input."
         },
         {
             id: 3,
             stepId: "STEP_03",
-            title: "Finalization & Submission Ready",
-            description: "With your approval on the final draft, we deliver a polished, professional, and print-ready document package. You receive everything you need to confidently submit a strong application to immigration authorities, putting you on the path to approval."
+            title: "Finalize & Empower",
+            description: "We deliver a polished, professional, and powerful final document. You are equipped with a strategic tool to achieve your goal—be it visa approval, investment, or successful market entry."
         }
     ];
 
@@ -33,7 +33,7 @@ const Step = () => {
                 {/* Main Title */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-purple-900 mb-4">
-                        Our Step-By-Step Approach
+                        A Collaborative and Transparent Process
                     </h2>
                 </div>
 

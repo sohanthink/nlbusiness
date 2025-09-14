@@ -13,9 +13,10 @@ import Why from "@/components/Home/Why";
 import Count from "@/components/Home/Count";
 import Testimonial from "@/components/Home/Testimonial";
 import Subscribe from "@/components/common/Subscribe";
-import WhyNL from "@/components/about/WhyNL";
 import Blog from "@/components/common/Blog";
 import Step from "@/components/service/usimmigration/Step";
+import WhyChooseUs from "@/components/about/WhyChooseUs";
+import Banner2 from "@/components/Home/Banner2";
 
 const page = () => {
   const bannerCardRef = useRef(null);
@@ -46,9 +47,10 @@ const page = () => {
 
   return (
     <>
-      <Banner />
+      {/* <Banner /> */}
+      <Banner2 />
 
-      <motion.div
+      {/* <motion.div
         ref={bannerCardRef}
         initial="hidden"
         animate={isBannerCardInView ? "visible" : "hidden"}
@@ -56,7 +58,7 @@ const page = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <BannerCard />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         ref={builtRef}
@@ -99,7 +101,7 @@ const page = () => {
         <Team />
       </motion.div>
       {/* <Why /> */}
-      <WhyNL />
+      <WhyChooseUs />
       <Step />
       <Count />
       <Blog />

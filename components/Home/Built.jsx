@@ -17,31 +17,31 @@ const Built = () => {
                     />
                 </div>
                 <div className="md:w-1/2 w-full space-y-7 pt-5 md:pt-0">
-                    <h2 className="!text-black">Built for Your Success, Backed by Our Expertise</h2>
+                    <h2 className="!text-black"> One Plan, Two Objectives: Immigration Compliance and Business Growth</h2>
                     <p className="text-gray">
-                        At NL Immigration, we understand that your application is more than paperwork—it's your future. Our team of expert writers and immigration specialists dedicates itself to crafting personalized, thoroughly researched business plans that meet the strict standards of Canadian immigration officials. We don't use templates; we build convincing narratives.
+                        Whether your goal is to secure a visa or secure funding, the foundation is the same: a credible, persuasive, and financially sound business plan. Our team of senior analysts and strategists combines expertise in international immigration law with sharp business acumen. We don't just write documents; we build strategic roadmaps for your success.
                     </p>
                     <div className="space-y-5">
                         <div className="flex justify-between gap-5 ">
                             <Image src={icon1} alt="icon1" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Comprehensive Visa Strategy:</h3>
+                                <h3 className="font-bold text-xl">Dual-Purpose Expertise:</h3>
                                 <p className="text-gray">
-                                    We analyze your profile and goals to recommend the strongest possible pathway for your application.
+                                    Plans are crafted to satisfy government immigration officers and discerning investors simultaneously.
                                 </p>
                             </div>
                         </div>
                         <div className="flex justify-between gap-5">
                             <Image src={icon2} alt="icon2" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
                             <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Meticulous Document Preparation:</h3>
+                                <h3 className="font-bold text-xl">Market-Led Financial Modeling:</h3>
                                 <p className="text-gray">
-                                    From business plans to letters of intent, every document is crafted for clarity, compliance, and impact.
+                                    We develop realistic, defensible financial projections—including P&L, Cash Flow, and Balance Sheets—based on real-world data.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <button className="primary-button bg-dark">Learn more</button>
+                    <button className="primary-button bg-dark">Explore Our Methodology</button>
                 </div>
             </div>
         </section>

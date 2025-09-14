@@ -2,13 +2,14 @@
 import React from 'react';
 import { IoIosSend } from 'react-icons/io';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import rushrightshape from "@/public/images/service/rushrightshape.png";
 import rushleftshape from "@/public/images/service/rushleftshape.png";
 
-const Rush = () => {
+const Rush = ({ contactLink = "#consultation" }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -45,13 +46,13 @@ const Rush = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                 >
-                    <button
+                    <Link
+                        href={contactLink}
                         className="hover:bg-secondary bg-white transition-all duration-200 ease-linear flex justify-center gap-2 items-center relative group/btn px-4 text-black-300 hover:text-gray rounded-full h-10 font-bold uppercase shadow-md text-sm"
-                        type="submit"
                     >
                         Contact Us <IoIosSend />
                         <BottomGradient />
-                    </button>
+                    </Link>
                 </motion.div>
                 <Image className='absolute right-0 top-20 w-[50px] md:w-[250px] h-[50px] md:h-[250px] object-cover' src={rushrightshape} alt='subscribe_shape' />
                 <Image className='absolute inset-0 top-10 left-5 w-[50px] md:w-[250px] h-[50px] md:h-[250px] object-cover' src={rushleftshape} alt='subscribe_shape' />

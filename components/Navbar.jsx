@@ -95,65 +95,11 @@ const Navbar = () => {
 
     const servicesData = {
         canadaImmigration: [
-            {
-                title: "Business Idea Selection",
-                items: [
-                    { name: "Business Concept Exploration", href: "/business-concept" },
-                    { name: "Strategic Assessment", href: "/baseline-discovery" },
-                    { name: "Strategic Research", href: "/strategic-research" },
-                ],
-            },
-            {
-                title: "Start-Up Programs",
-                items: [
-                    {
-                        name: "Start-Up Visa Application",
-                        href: "/start-up-visa-application",
-                    },
-                    {
-                        name: "Self-Employment Business Proposal",
-                        href: "/self-employment-business-proposal",
-                    },
-                    {
-                        name: "Intra-Company Transfer Immigration Plan",
-                        href: "/intra-company-transfer-immigration-plan",
-                    },
-                ],
-            },
-            {
-                title: "Provincial Programs",
-                items: [
-                    {
-                        name: "AAIP-Compliant Business Plan",
-                        href: "/aaip-business-plans",
-                    },
-                    {
-                        name: "BC PNP Business Planning",
-                        href: "/bc-pnp-business-planning",
-                    },
-                    {
-                        name: "BC PNP Regional Business Plan",
-                        href: "/bc-pnp-entrepreneur-immigration",
-                    },
-                    {
-                        name: "BC PNP Entrepreneur Stream",
-                        href: "/bc-pnp-entrepreneur-stream",
-                    }
-                ],
-            },
-            {
-                title: "Work Permits",
-                items: [
-                    {
-                        name: "LMIA Owner-Operator Stream",
-                        href: "/lmia-owner-operator-stream",
-                    },
-                    {
-                        name: "C10 Significant Benefit Work Permit",
-                        href: "/c10-significant-benefit-work-permit",
-                    },
-                ],
-            },
+            { name: "Alberta Immigrant Nominee Program (AINP)", href: "/services/uk-immigrations/AINP" },
+            { name: "BC Provincial Nominee Program (BC PNP)", href: "/services/uk-immigrations/BCPNP" },
+            { name: "Québec Entrepreneur Program", href: "/services/uk-immigrations/quebec-entrepreneur-program" },
+            { name: "Québec Investor Program (may be suspended or revised)", href: "/services/uk-immigrations/Quebec-Investor-Program" },
+            { name: "Self-Employed Persons Program", href: "/services/uk-immigrations/self-employed-persons program" },
         ],
         ukImmigration: [
             { name: "Innovator Founder Visa Business Plan", href: "/services/uk-immigrations/innovator-founder-visa-business-plan" },
@@ -217,6 +163,7 @@ const Navbar = () => {
                                     alt="logo"
                                     width={60}
                                     height={60}
+                                    quality={100}
                                     className="md:w-[70px] md:h-[70px]"
                                 />
                             </div>
@@ -263,7 +210,7 @@ const Navbar = () => {
                                 onMouseEnter={() => setIsMegaMenuOpen(true)}
                                 className="px-4 py-12 font-semibold text-base text-black flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
                             >
-                                Service <FaChevronDown className={`text-xs transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                                Services <FaChevronDown className={`text-xs transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
                             </button>
 
                             {/* Mega Menu*/}
@@ -275,6 +222,44 @@ const Navbar = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
                                         {/* Column 1 - Immigration Services */}
                                         <div className="space-y-6">
+
+                                            {/* Canada Immigration */}
+                                            <div>
+                                                <Link href="/services/canada-immigrations" className="block">
+                                                    <div className="flex items-center gap-2 mb-3 hover:text-blue-600 transition-colors duration-200">
+                                                        <div className="w-4 h-4 bg-blue-600 p-3 rounded-sm flex items-center justify-center">
+                                                            <span className="text-white font-bold text-xs">UK</span>
+                                                        </div>
+                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
+                                                            Canada Immigration
+                                                        </h3>
+                                                        <GoChevronRight className="text-gray-400 text-xs" />
+                                                    </div>
+                                                </Link>
+                                                <ul className="space-y-2 ml-6">
+                                                    {servicesData.canadaImmigration.map((item) => (
+                                                        <li key={item.name}>
+                                                            <Link
+                                                                href={item.href}
+                                                                onClick={handleMegaMenuItemClick}
+                                                                className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                    <li>
+                                                        <Link
+                                                            href="/services/canada-immigrations#all-immigration"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                             {/* U.S. Immigration */}
                                             <div>
                                                 <Link href="/services/usa-immigrations" className="block">
@@ -312,68 +297,7 @@ const Navbar = () => {
                                                 </ul>
                                             </div>
 
-                                            {/* UK Immigration */}
-                                            <div>
-                                                <Link href="/services/uk-immigrations" className="block">
-                                                    <div className="flex items-center gap-2 mb-3 hover:text-blue-600 transition-colors duration-200">
-                                                        <div className="w-4 h-4 bg-blue-600 p-3 rounded-sm flex items-center justify-center">
-                                                            <span className="text-white font-bold text-xs">UK</span>
-                                                        </div>
-                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
-                                                            UK Immigration
-                                                        </h3>
-                                                        <GoChevronRight className="text-gray-400 text-xs" />
-                                                    </div>
-                                                </Link>
-                                                <ul className="space-y-2 ml-6">
-                                                    {servicesData.ukImmigration.map((item) => (
-                                                        <li key={item.name}>
-                                                            <Link
-                                                                href={item.href}
-                                                                onClick={handleMegaMenuItemClick}
-                                                                className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
-                                                            >
-                                                                {item.name}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
 
-                                            {/* UAE Immigration */}
-                                            <div>
-                                                <Link href="/services/uae-immigrations" className="block">
-                                                    <div className="flex items-center gap-2 mb-3 hover:text-green-600 transition-colors duration-200">
-                                                        <div className="w-4 h-4 bg-green-600 p-3 rounded-sm flex items-center justify-center">
-                                                            <span className="text-white font-bold text-xs">UAE</span>
-                                                        </div>
-                                                        <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
-                                                            UAE Immigration
-                                                        </h3>
-                                                        <GoChevronRight className="text-gray-400 text-xs" />
-                                                    </div>
-                                                </Link>
-                                                <ul className="space-y-2 ml-6">
-                                                    <li>
-                                                        <Link
-                                                            href="/services/uae-immigrations/golden-visa-business-plan"
-                                                            onClick={handleMegaMenuItemClick}
-                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
-                                                        >
-                                                            Golden Visa Business Plan
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link
-                                                            href="/services/uae-immigrations/green-visa-work-business-plan"
-                                                            onClick={handleMegaMenuItemClick}
-                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
-                                                        >
-                                                            Green Visa for Work Business Plan
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
 
                                         {/* Column 2 - Advisory Services */}

@@ -18,14 +18,16 @@ const Banner = () => {
             <div className="container flex justify-center items-center h-full">
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="w-full md:w-1/2 relative text-center md:text-left">
-                        <Image src={textshape} alt="textshape" className="absolute top-28 md:top-56 left-52 w-42 md:w-[80%] md:h-7 -z-10 hidden md:block opacity-20" />
-                        <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">Your Canadian Dream, Supported by Precision and Expertise.
+                        {/* <Image src={textshape} alt="textshape" className="absolute top-28 md:top-56 left-52 w-42 md:w-[80%] md:h-7 -z-10 hidden md:block opacity-20" /> */}
+                        <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">Strategic Business Plans for Global Ventures and Visa Success
                         </h1>
-                        <p className="my-5 md:my-6">NL Immigration crafts compelling, visa-compliant business plans and immigration documents that tell your unique story. We turn your ambition into a validated pathway to Canadian success. </p>
-                        <Button link='#' cn='' text='Get Your Free Consultation' />
+                        <p className="my-5 md:my-6">Business Venture Canada is your expert partner for crafting data-driven business plans that achieve two critical goals: securing international visas and launching profitable, scalable enterprises. We turn ambitious visions into validated, investment-ready strategies. </p>
+                        <Button link='#' cn='' text='Get a Free Strategy Session' />
                     </div>
                     <div className="w-full md:w-1/2">
-                        <Image src={banner} alt="banner" className="w-full md:h-[600px] h-[300px] object-contain" />
+                        <div className="">
+                            <Image src={banner} alt="banner" className="w-full md:h-[650px] h-[300px] object-contain" />
+                        </div>
                     </div>
                 </div>
             </div>

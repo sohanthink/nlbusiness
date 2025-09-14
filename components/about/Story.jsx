@@ -17,7 +17,7 @@ const Story = () => {
                     {/* Right: Text Paragraph */}
                     <div>
                         <p className="text-gray-600 text-lg leading-relaxed">
-                            <b>NL Immigration</b> began with a simple observation: the immigration process is more than just paperwork; it's about people, dreams, and life-changing opportunities. Our founders saw a need for a service that combined meticulous document preparation with genuine, personal support. In this short video, we share our story and the mission that drives every project we undertake.
+                            A journey of a thousand miles begins with a single step. Let this video be your first. See firsthand how <b>Business Venture Canada</b> transforms complex immigration and business landscapes into clear, actionable pathways. Watch as we guide ambitious entrepreneurs and investors like you through the process of turning a vision for a new life into a thriving reality in Canada, the USA, and beyond. This isn't just about paperwork; it's about people, potential, and prosperity.
                         </p>
                     </div>
                 </div>

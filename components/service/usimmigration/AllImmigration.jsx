@@ -6,82 +6,27 @@ import { FaArrowRight } from "react-icons/fa";
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-const AllImmigration = () => {
+const AllImmigration = ({
+    businessPlans = [],
+    title = "All Immigration Business Plans",
+    sectionId = "all-immigration"
+}) => {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-    const businessPlans = [
-        {
-            id: 1,
-            title: "E-2 Visa Business Plan",
-            description: "Support your E-2 visa application with a custom-made business plan that meets the requirements.",
-            href: "/services/usa-immigrations/e2-visa"
-        },
-        {
-            id: 2,
-            title: "L-1 Visa Business Plan",
-            description: "Support your L-1 visa application with a custom-made business plan that meets the requirements.",
-            href: "/l-1-business-plan"
-        },
-        {
-            id: 3,
-            title: "EB-2 NIW Visa Business Plan",
-            description: "Support your EB-2 NIW visa application with a custom-made business plan that meets the requirements.",
-            href: "/eb-2-niw-business-plan"
-        },
-        {
-            id: 4,
-            title: "EB-5 Visa Business Plan",
-            description: "Support your EB-5 visa application with a custom-made business plan that meets the requirements.",
-            href: "/eb-5-business-plan"
-        },
-        {
-            id: 5,
-            title: "Regional Center Business Plan",
-            description: "Support your Regional Center application with a custom-made business plan that meets the requirements.",
-            href: "/regional-center-business-plan"
-        },
-        {
-            id: 6,
-            title: "Innovator Founder Visa Business Plan",
-            description: "Support your Innovator Founder visa application with a custom-made business plan that meets the requirements.",
-            href: "/innovator-founder-business-plan"
-        },
-        {
-            id: 7,
-            title: "Expansion Worker Visa Business Plan",
-            description: "Support your Expansion Worker visa application with a custom-made business plan that meets the requirements.",
-            href: "/expansion-worker-business-plan"
-        },
-        {
-            id: 8,
-            title: "Golden Visa Business Plan",
-            description: "Support your Golden visa application with a custom-made business plan that meets the requirements.",
-            href: "/golden-visa-business-plan"
-        },
-        {
-            id: 9,
-            title: "Green Visa for Work Business Plan",
-            description: "Support your Green visa for work application with a custom-made business plan that meets the requirements.",
-            href: "/green-visa-business-plan"
-        },
-        {
-            id: 10,
-            title: "Start-Up Visa Business Plan",
-            description: "Support your Start-Up visa application with a custom-made business plan that meets the requirements.",
-            href: "/startup-visa-business-plan"
-        }
-    ];
+    // Don't render anything if no business plans are provided
+    if (!businessPlans || businessPlans.length === 0) {
+        return null;
+    }
 
     return (
-        <section id="all-immigration" ref={sectionRef} className="w-full py-16 bg-white">
+        <section id={sectionId} ref={sectionRef} className="w-full py-16 bg-white">
             <div className="container mx-auto px-4 max-w-7xl">
                 {/* Header */}
                 <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className={`transition-all duration-700 ${isInView ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                            All Immigration Business
-                            Plans
+                        <h2 className="leading-tight">
+                            {title}
                         </h2>
                     </div>
                     {businessPlans.slice(0, 2).map((plan, index) => (
@@ -101,7 +46,7 @@ const AllImmigration = () => {
 
                                     {/* Content */}
                                     <div className="mt-6 lg:mt-8">
-                                        <h3 className="text-base lg:text-lg font-bold text-gray-900 mb-3 pr-10 lg:pr-12 group-hover:text-primary transition-colors duration-300">
+                                        <h3 className="font-bold !text-base md:!text-xl text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
                                             {plan.title}
                                         </h3>
 
@@ -137,7 +82,7 @@ const AllImmigration = () => {
 
                                     {/* Content */}
                                     <div className="mt-6 lg:mt-8">
-                                        <h3 className="text-base lg:text-lg font-bold text-gray-900 mb-3 pr-10 lg:pr-12 group-hover:text-primary transition-colors duration-300">
+                                        <h3 className="!text-base md:!text-xl font-bold text-gray-900 mb-3 pr-10 lg:pr-12 group-hover:text-primary transition-colors duration-300">
                                             {plan.title}
                                         </h3>
 

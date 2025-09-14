@@ -12,22 +12,22 @@ const Solution = () => {
         <div className='relative section-padding'>
             <Image src={solutionbanner} alt='solutionbanner' className='w-full h-full object-cover absolute top-0 left-0 -z-10' />
             <div className='container'>
-                <h2 className='text-center py-14 z-10 md:px-80'>Our Core Immigration Services</h2>
+                <h2 className='text-center py-14 z-10 md:px-80'>Our Expert Planning Services</h2>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     <Card
                         src={solution1}
                         heading='Immigration Business Plans'
-                        description='The cornerstone of your visa application. Our custom business plans demonstrate the viability of your venture and its benefit to Canada, meticulously tailored for programs like Start-Up Visa, Self-Employed, or Provincial Nominee.'
+                        description='Your pathway to a new life. Custom, compliant business plans for a wide range of global visa programs, including Start-Up Visas, Entrepreneur programs, and E-2 Treaty Investor visas.'
                     />
                     <Card
                         src={solution2}
-                        heading='Franchisor Master Business Plans'
-                        description='Expand your franchise into the Canadian market. We create master business plans that help franchisors meet immigration requirements for transferring key staff and managers to Canada.'
+                        heading='Investor & Startup Business Plans'
+                        description='Fuel your growth and secure capital. Persuasive and detailed plans designed to attract venture capital, bank loans, angel investors, and strategic partners.'
                     />
                     <Card
                         src={solution3}
-                        heading='Corporate Immigration Support'
-                        description='Seamless global mobility for your team. We support businesses with the documentation needed to secure work permits and visas for essential employees, ensuring compliance and a smooth transition.'
+                        heading='Corporate Strategic Plans'
+                        description='Guide your business expansion. Comprehensive plans for market entry, franchising, new product launches, and long-term strategic direction.'
                     />
                 </div>
             </div>

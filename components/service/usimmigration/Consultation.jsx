@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-const Consultation = () => {
+const Consultation = ({ sectionId = "consultation" }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -14,27 +14,39 @@ const Consultation = () => {
     const contactCards = [
         {
             id: 1,
-            title: "(01) Visit Us Daily",
-            address: "4140 Parker Rd. Allentown, Canada 31134",
-            flag: "🇨🇦", // Canadian flag
-            bgColor: "bg-white",
-            textColor: "text-gray"
+            title: "Toronto Office",
+            subtitle: "Headquarters",
+            address: "123 Bay Street, Suite 1000\nToronto, ON M5H 2Y2",
+            phone: "+1 (416) 555-0123",
+            email: "toronto@businessventure.ca",
+            flag: "🇨🇦",
+            bgColor: "bg-gradient-to-br from-red-500 to-red-600",
+            textColor: "text-white",
+            icon: "🏢"
         },
         {
             id: 2,
-            title: "(02) Visit Uk Daily",
-            address: "4140 Parker Rd. Allentown, Canada 31134",
-            flag: "🇬🇧", // UK flag
-            bgColor: "bg-primary",
-            textColor: "text-white"
+            title: "Vancouver Office",
+            subtitle: "West Coast Hub",
+            address: "789 Robson Street, Suite 200\nVancouver, BC V6Z 1A1",
+            phone: "+1 (604) 555-0456",
+            email: "vancouver@businessventure.ca",
+            flag: "🇨🇦",
+            bgColor: "bg-gradient-to-br from-primary to-purple-600",
+            textColor: "text-white",
+            icon: "🌊"
         },
         {
             id: 3,
-            title: "(03) Visit Canada Daily",
-            address: "4140 Parker Rd. Allentown, Canada 31134",
-            flag: "🇨🇦", // Canadian flag
-            bgColor: "bg-white",
-            textColor: "text-gray"
+            title: "Montreal Office",
+            subtitle: "Quebec Specialist",
+            address: "456 Saint-Catherine Street\nMontreal, QC H3B 1A5",
+            phone: "+1 (514) 555-0789",
+            email: "montreal@businessventure.ca",
+            flag: "🇨🇦",
+            bgColor: "bg-gradient-to-br from-blue-500 to-blue-600",
+            textColor: "text-white",
+            icon: "🏛️"
         }
     ]
 
@@ -53,133 +65,199 @@ const Consultation = () => {
     }
 
     return (
-        <div className="container section-padding">
-            {/* Contact Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {contactCards.map((card) => (
-                    <div
-                        key={card.id}
-                        className={`${card.bgColor} ${card.textColor} p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300`}
-                    >
-                        <div className="text-center">
-                            <div className="text-4xl mb-4">{card.flag}</div>
-                            <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-                            <p className={`text-sm ${card.bgColor === 'bg-primary' ? '!text-white' : 'opacity-80'}`}>{card.address}</p>
+        <section id={sectionId} className="bg-gradient-to-br from-gray-50 via-white to-blue-50">
+            <div className="container section-padding">
+                {/* Contact Cards Section */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    {contactCards.map((card) => (
+                        <div
+                            key={card.id}
+                            className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                        >
+                            {/* Background Gradient */}
+                            <div className={`${card.bgColor} absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300`}></div>
+
+                            {/* Decorative Elements */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12 group-hover:scale-125 transition-transform duration-500"></div>
+
+                            {/* Content */}
+                            <div className="relative z-10 p-8 text-center">
+                                {/* Icon and Flag */}
+                                <div className="flex justify-center items-center gap-3 mb-4">
+                                    <span className="text-3xl">{card.icon}</span>
+                                    <span className="text-2xl">{card.flag}</span>
+                                </div>
+
+                                {/* Title and Subtitle */}
+                                <h3 className="text-xl font-bold mb-2 text-white">{card.title}</h3>
+                                <p className="text-white/80 text-sm font-medium mb-4">{card.subtitle}</p>
+
+                                {/* Address */}
+                                <div className="text-white/90 text-sm leading-relaxed mb-4">
+                                    {card.address.split('\n').map((line, index) => (
+                                        <p key={index}>{line}</p>
+                                    ))}
+                                </div>
+
+                                {/* Contact Info */}
+                                <div className="space-y-2 text-sm text-white/80">
+                                    <p className="flex items-center justify-center gap-2">
+                                        <span>📞</span>
+                                        <span>{card.phone}</span>
+                                    </p>
+                                    <p className="flex items-center justify-center gap-2">
+                                        <span>✉️</span>
+                                        <span className="text-xs">{card.email}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Heading Section */}
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        <span>🎯</span>
+                        <span>Get Expert Guidance</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary to-gray-900 bg-clip-text text-transparent mb-6">
+                        Free Consultation Right Now
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        With so many options, choosing the right program is the first critical step. Book a free consultation with our experts to identify the best Canadian immigration stream for your business and goals.
+                    </p>
+                </div>
+
+                {/* Contact Form Section */}
+                <div className="max-w-4xl mx-auto">
+                    <div className="relative">
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-blue-50/50 rounded-3xl"></div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-32 translate-x-32"></div>
+                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/5 rounded-full translate-y-24 -translate-x-24"></div>
+
+                        {/* Form Container */}
+                        <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-white/20">
+                            <div className="text-center mb-8">
+                                <div className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold mb-4">
+                                    <span>💬</span>
+                                    <span>Start Your Journey</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your Free Consultation</h3>
+                                <p className="text-gray-600">Fill out the form below and our experts will get back to you within 24 hours</p>
+                            </div>
+
+                            <form onSubmit={handleSubmit} className="space-y-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {/* Name Field */}
+                                    <div className="group">
+                                        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                                            <span className="text-primary">👤</span>
+                                            <span>Your Name</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                            className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70 backdrop-blur-sm"
+                                            placeholder="Enter your full name"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Email Field */}
+                                    <div className="group">
+                                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                                            <span className="text-primary">✉️</span>
+                                            <span>Your Email</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70 backdrop-blur-sm"
+                                            placeholder="Enter your email address"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Phone Field */}
+                                    <div className="group">
+                                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                                            <span className="text-primary">📱</span>
+                                            <span>Your Phone</span>
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70 backdrop-blur-sm"
+                                            placeholder="Enter your phone number"
+                                            required
+                                        />
+                                    </div>
+
+                                    {/* Website Field */}
+                                    <div className="group">
+                                        <label htmlFor="website" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                                            <span className="text-primary">🌐</span>
+                                            <span>Your Website</span>
+                                        </label>
+                                        <input
+                                            type="url"
+                                            id="website"
+                                            name="website"
+                                            value={formData.website}
+                                            onChange={handleInputChange}
+                                            className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70 backdrop-blur-sm"
+                                            placeholder="Enter your website URL (optional)"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Message Field */}
+                                <div className="group">
+                                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                                        <span className="text-primary">💬</span>
+                                        <span>Your Message</span>
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        rows="6"
+                                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 resize-none bg-white/70 backdrop-blur-sm"
+                                        placeholder="Tell us about your business goals and immigration objectives..."
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                {/* Submit Button */}
+                                <div className="text-center pt-4">
+                                    <button
+                                        type="submit"
+                                        className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg uppercase tracking-wide"
+                                    >
+                                        <span>🚀</span>
+                                        <span>Send Message</span>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                ))}
-            </div>
-
-            {/* Heading Section */}
-            <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                    Free Consultation Right Now
-                </h2>
-            </div>
-
-            {/* Contact Form Section */}
-            <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-lg shadow-lg p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* Name Field */}
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Your name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                                    placeholder="Enter your name"
-                                    required
-                                />
-                            </div>
-
-                            {/* Email Field */}
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Your email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                            </div>
-
-                            {/* Phone Field */}
-                            <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Your phone
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                                    placeholder="Enter your phone number"
-                                    required
-                                />
-                            </div>
-
-                            {/* Website Field */}
-                            <div>
-                                <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Your website
-                                </label>
-                                <input
-                                    type="url"
-                                    id="website"
-                                    name="website"
-                                    value={formData.website}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                                    placeholder="Enter your website URL"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Message Field */}
-                        <div>
-                            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                                rows="6"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200 resize-none"
-                                placeholder="Message...."
-                                required
-                            ></textarea>
-                        </div>
-
-                        {/* Submit Button */}
-                        <div className="text-center">
-                            <button
-                                type="submit"
-                                className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 uppercase tracking-wide"
-                            >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

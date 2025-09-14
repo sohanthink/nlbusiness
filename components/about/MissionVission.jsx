@@ -8,8 +8,8 @@ const MissionVission = ({ variant = 'mission', title, content, image }) => {
     const defaultMissionContent = {
         title: "Our Mission: To Pave Your Path to Success",
         content: [
-            "Our mission is to provide unparalleled expertise and personalized support to aspiring immigrants and entrepreneurs. We are dedicated to crafting powerful, customized business plans and immigration documents that not only meet strict legal requirements but also tell your unique story compellingly.",
-            "We succeed only when you do."
+            "At Business Venture Canada, our mission is to empower global entrepreneurs and investors by providing unparalleled strategic guidance and meticulous execution for business immigration. We demystify the complexities of international relocation and investment, turning formidable challenges into achievable milestones.",
+            " We are dedicated to being more than consultants; we are your venture partners, committed to building a foundation for your success and ensuring your journey is seamless, secure, and strategically sound."
         ],
         image: mission
     }
@@ -18,8 +18,7 @@ const MissionVission = ({ variant = 'mission', title, content, image }) => {
     const defaultVisionContent = {
         title: "Our Vision: Empowering Dreams, Building Futures",
         content: [
-            "Our vision is to be the leading force in immigration consulting, transforming lives through exceptional service and innovative solutions. We envision a world where every dream of immigration and entrepreneurship is supported by expert guidance and unwavering commitment.",
-            "Building bridges to new opportunities, one success story at a time."
+            "Our vision is a world without barriers to ambition. We aspire to be the world's most trusted catalyst for global business mobility, recognized for turning diverse dreams of immigration into tangible success stories. We see a future where every qualified entrepreneur and investor can access opportunity, contribute to growing economies, and achieve their fullest potential—and we are the architects making that vision a reality."
         ],
         image: vission
     }

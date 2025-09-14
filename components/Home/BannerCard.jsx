@@ -7,10 +7,10 @@ import Image from 'next/image'
 const BannerCard = () => {
     return (
         <div className='container grid grid-cols-1 md:grid-cols-3 gap-4 section-padding mt-14 md:mt-0'>
-            <Card icon={bannercardicon1} iconalt='bannercardicon1' title='Visa Applicants' description='Navigate the complex visa process with confidence. We handle the intricate business plans and supporting documents, so you can focus on preparing for your new life in Canada.' index={0} />
+            <Card icon={bannercardicon1} iconalt='bannercardicon1' title='Immigrants & Investors' description='Securing your future in a new country. We develop compelling, immigration-compliant business plans that meet the strict requirements of visa programs in Canada, the USA, UK, Australia, and beyond.' index={0} />
 
-            <Card icon={bannercardicon2} iconalt='bannercardicon2' title='Immigration Attorneys & Consultants' description='Trusted by professionals to elevate their service offering. We provide your clients with flawless, ready-to-submit business plans, strengthening your petitions and saving you valuable time.' index={1} />
-            <Card icon={bannercardicon3} iconalt='bannercardicon3' title='Entrepreneurs & Small Business Owners' description=' Launch and grow your Canadian business with a solid foundation. Our plans are not just for visas—they are actionable roadmaps for your financial success.' index={2} />
+            <Card icon={bannercardicon2} iconalt='bannercardicon2' title="Startups & Entrepreneurs" description="Launching and scaling your venture. We create robust, investor-ready business plans to secure funding, attract partners, and guide your startup's strategy with clarity and confidence." index={1} />
+            <Card icon={bannercardicon3} iconalt='bannercardicon3' title='Established Corporations & Franchises' description='Expanding your operations globally. We provide master business plans for market entry, franchising, and strategic growth, supported by meticulous market and financial analysis.' index={2} />
         </div>
     )
 }

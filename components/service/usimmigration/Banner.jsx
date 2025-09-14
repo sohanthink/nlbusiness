@@ -15,7 +15,7 @@ import logo6 from '@/public/images/home/partner/logo6.png'
 
 
 
-const Banner = ({ title, description, src }) => {
+const Banner = ({ title, description, src, btnLink, btnCn, btnText }) => {
     const partnerLogos = [
         {
             id: 1,
@@ -57,7 +57,7 @@ const Banner = ({ title, description, src }) => {
                         <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">{title}
                         </h1>
                         <p className="my-5 md:my-6">{description}</p>
-                        <Button link='#' cn='' text='Get Consultation' />
+                        <Button link={btnLink} cn={btnCn} text={btnText} />
                         <div className="flex items-center gap-3 mt-7 flex-wrap">
                             <FcGoogle className="text-2xl" />
                             <div className="flex items-center gap-1">
