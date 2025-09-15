@@ -4,27 +4,40 @@ import pricingshape from "@/public/images/service/innerpages/pricingshape.png"
 
 
 const Pricing = ({
-    startingPrice = "C$ 35,00",
+    startingPrice = "C$ 3,500",
     daysUntilDraft = "10-15 business days",
     rushServiceText = "Rush service available",
     numberOfPages = "Custom",
+    packageTitle = "Comprehensive Business Plan Package",
+    packageSubtitle = "Transparent Investment in Your Future",
     includedFeatures = [
-        "Professional Graphic Design",
-        "Personalized Business Plan",
-        "Unlimited Revisions",
-        "Flat Rate Pricing",
-        "Industry Expertise",
-        "Dedicated Team"
+        "Executive Summary tailored to your goals",
+        "Detailed Company Description & Legal Structure",
+        "Market & Industry Analysis",
+        "Job Creation Plan",
+        "Marketing & Operations Strategy",
+        "5-Year Financial Projections",
+        "Documentation Review Support",
+        "Two rounds of revisions"
     ],
+    whatIncludedTitle = "What's Included in Your Plan",
+    whatIncludedSubtitle = "Everything You Need for a Strong Application",
+    whatIncludedFeatures = [
+        "Compliance with Program Guidelines",
+        "Economic Benefit Argument",
+        "Local Market Analysis",
+        "Management Plan",
+        "Risk Analysis & Mitigation",
+        "Professional Formatting & Design"
+    ],
+    processTitle = "Our Collaborative Process",
+    processSubtitle = "5 Key Steps to Success",
     processSteps = [
-        "Gather applicant information",
-        "Propose 15-20 ideas",
-        "Brainstorming Session",
-        "Narrow ideas to top 5",
-        "Research & evaluation of top ideas",
-        "Recommend best 1-2 ideas",
-        "Deliverable: Business Idea Selection Report",
-        "Client makes a decision"
+        "Discover: Deep-dive consultation on your business concept and goals",
+        "Research & Analyze: Our experts research your industry and local competition",
+        "Develop & Draft: We create the first draft of your comprehensive business plan",
+        "Review & Refine: We share the draft with you for feedback and make revisions",
+        "Finalize & Deliver: You receive a polished, professional, and print-ready document"
     ],
 
 }) => {
@@ -102,7 +115,7 @@ const Pricing = ({
                                 className="absolute bottom-0 right-0 w-50"
                             />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">10 Step Process:</h3>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-6">{processTitle}:</h3>
 
                         <ul className="space-y-3">
                             {processSteps.map((item, index) => (

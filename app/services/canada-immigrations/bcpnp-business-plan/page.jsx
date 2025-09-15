@@ -4,8 +4,8 @@ import Section2 from '@/components/service/innerpages/Section2'
 
 
 import bc from "@/public/images/services/canada/bcpnp/bcbanner.png"; // <- Create this image
+import sttrategy from "@/public/images/services/canada/bcpnp/bcpnp-sttragic.png"; // <- Create this image
 
-import investor from "@/public/images/service/innerpages/investor.png";
 import Pricing from '@/components/service/innerpages/Pricing'
 import Video from '@/components/service/innerpages/Video'
 import Step from '@/components/service/usimmigration/Step'
@@ -82,7 +82,7 @@ const Bcpnp = () => {
                 p2='We address every critical element of the program to strengthen your application:'
                 p3="Investment & Ownership: Clearly justifying your investment amount and personal equity percentage, as required. Economic Benefit: Articulating how your business aligns with BC's economic priorities (e.g., innovation, exports, regional development). Job Creation: Providing a detailed and credible plan for creating new permanent jobs for Canadians/PRs in BC. Active Management: Demonstrating your plan to actively manage the business from within BC. Business Viability: Building a rock-solid case with realistic financial projections tailored to the BC market."
                 p4="With our support, you can confidently present a business plan that proves you are a high-value candidate ready to contribute to British Columbia's future."
-                src={investor}
+                src={sttrategy}
                 variant='right'
             />
 

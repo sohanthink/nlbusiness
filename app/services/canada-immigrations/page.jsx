@@ -81,7 +81,7 @@ const CanadaImmigrations = () => {
                         id: 3,
                         title: "Manitoba Provincial Nominee Program (MPNP) – Business Investor Stream",
                         description: "Secure your Manitoba business investment with our comprehensive MPNP business plan.",
-                        href: "/services/canada-immigrations/manitoba-business"
+                        href: "/services/canada-immigrations/manitoba-business-plan"
                     },
                     {
                         id: 4,

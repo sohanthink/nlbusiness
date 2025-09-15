@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
+import { boldSpecificText, defaultPhrasesToBold } from "@/utils/textProcessor";
 
 
-const Section2 = ({ src, title, p1, p2, p3, variant = "left" }) => {
+const Section2 = ({ src, title, p1, p2, p3, variant = "left", phrasesToBold = defaultPhrasesToBold }) => {
     // Determine layout based on variant
     const isRightVariant = variant === "right";
 
@@ -18,17 +19,17 @@ const Section2 = ({ src, title, p1, p2, p3, variant = "left" }) => {
                         </h2>
                         {
                             p1 && (
-                                <p>{p1}</p>
+                                <p className="text-gray leading-relaxed">{boldSpecificText(p1, phrasesToBold)}</p>
                             )
                         }
                         {
                             p2 && (
-                                <p>{p2}</p>
+                                <p className="text-gray leading-relaxed">{boldSpecificText(p2, phrasesToBold)}</p>
                             )
                         }
                         {
                             p3 && (
-                                <p>{p3}</p>
+                                <p className="text-gray leading-relaxed">{boldSpecificText(p3, phrasesToBold)}</p>
                             )
                         }
                     </div>
@@ -41,7 +42,7 @@ const Section2 = ({ src, title, p1, p2, p3, variant = "left" }) => {
                             src={src}
                             alt="Why choose us - Professional team collaboration"
                             height={500}
-                            className="w-full h-[360px] md:h-[500px] object-cover"
+                            className="w-full h-[360px] md:h-[500px] object-cover rounded-2xl"
                             priority={false}
                         />
                         {/* Subtle overlay on hover */}
