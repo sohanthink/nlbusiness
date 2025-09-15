@@ -95,8 +95,8 @@ const Navbar = () => {
 
     const servicesData = {
         canadaImmigration: [
-            { name: "Alberta Immigrant Nominee Program (AINP)", href: "/services/uk-immigrations/AINP" },
-            { name: "BC Provincial Nominee Program (BC PNP)", href: "/services/uk-immigrations/BCPNP" },
+            { name: "Alberta Immigrant Nominee Program (AINP)", href: "/services/canada-immigrations/ainp-business-plan" },
+            { name: "BC Provincial Nominee Program (BC PNP)", href: "/services/canada-immigrations/bcpnp-business-plan" },
             { name: "Québec Entrepreneur Program", href: "/services/uk-immigrations/quebec-entrepreneur-program" },
             { name: "Québec Investor Program (may be suspended or revised)", href: "/services/uk-immigrations/Quebec-Investor-Program" },
             { name: "Self-Employed Persons Program", href: "/services/uk-immigrations/self-employed-persons program" },
@@ -228,7 +228,7 @@ const Navbar = () => {
                                                 <Link href="/services/canada-immigrations" className="block">
                                                     <div className="flex items-center gap-2 mb-3 hover:text-blue-600 transition-colors duration-200">
                                                         <div className="w-4 h-4 bg-blue-600 p-3 rounded-sm flex items-center justify-center">
-                                                            <span className="text-white font-bold text-xs">UK</span>
+                                                            <span className="text-white font-bold text-xs">CA</span>
                                                         </div>
                                                         <h3 className="text-base font-bold text-gray-900 underline pb-2 border-b border-gray-200">
                                                             Canada Immigration

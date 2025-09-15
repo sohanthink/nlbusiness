@@ -6,7 +6,10 @@ import { FaUser, FaEnvelope, FaPhone, FaChevronDown, FaPen } from 'react-icons/f
 import contactbanner from "@/public/images/service/innerpages/contactbanner.png"
 
 
-const Contact = () => {
+const Contact = ({
+    title = "Let's Contact With Us",
+    subtitle = "At the heart of our commitment to providing exceptional immigration solutions stands our trusted"
+}) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -63,10 +66,10 @@ const Contact = () => {
                     {/* Title and Description */}
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                            Let's Contact With Us
+                            {title}
                         </h2>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            At the heart of our commitment to providing exceptional immigration solutions stands our trusted
+                            {subtitle}
                         </p>
                     </div>
 

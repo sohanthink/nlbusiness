@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterestP, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPlane } from 'react-icons/fa'
 
 import banner from "@/public/images/footer.png";
@@ -7,11 +8,11 @@ import logo from "@/public/logowhite.png";
 
 const Footer = () => {
     const countries = [
-        "United States",
-        "United Kingdom",
-        "Australia",
-        "New Zealand",
-        "Singapore"
+        { name: "United States", url: "/services/usa-immigrations" },
+        { name: "United Kingdom", url: "/services/uk-immigrations" },
+        { name: "Canada", url: "/services/canada-immigrations" },
+        { name: "New Zealand", url: "/services/new-zealand-immigrations" },
+        { name: "Singapore", url: "/services/singapore-immigrations" }
     ];
 
     const visaTypes = [
@@ -86,12 +87,12 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {countries.map((country, index) => (
                                     <li key={index}>
-                                        <a
-                                            href="#"
+                                        <Link
+                                            href={country.url}
                                             className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
                                         >
-                                            {country}
-                                        </a>
+                                            {country.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

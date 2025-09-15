@@ -1,38 +1,28 @@
+"use client";
 import React from 'react'
-import Subscribe from '@/components/common/Subscribe'
-import Testimonial from '@/components/Home/Testimonial'
-import Rush from '@/components/service/Rush'
-import AllImmigration from '@/components/service/usimmigration/AllImmigration'
-import Banner from '@/components/service/usimmigration/Banner'
-import Consultation from '@/components/service/usimmigration/Consultation'
-import Popular from '@/components/service/usimmigration/Popular'
-import PopularVisa from '@/components/service/usimmigration/PopularVisa'
-import Secret from '@/components/service/usimmigration/Secret'
-import Step from '@/components/service/usimmigration/Step'
-import VisaPlan from '@/components/service/usimmigration/VisaPlan'
-import Why from '@/components/service/usimmigration/Why'
-
+import Image from 'next/image'
 import banner from "@/public/images/service/servicebanner.png";
-
 
 const StartUp = () => {
     return (
         <>
-            <Banner title="Supporting the Growth of Your Start-up"
-                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, amet iusto at voluptate id laborum suscipit aliquam perspiciatis molestiae tenetur voluptatibus in aut, earum vitae itaque sequi ut ad atque obcaecati eos iste quas corporis? "
-                src={banner}
-            />
-            <Secret />
-            <Rush />
-            <Popular />
-            <AllImmigration />
-            <Testimonial />
-            <Why />
-            <Step />
-            <VisaPlan />
-            <PopularVisa />
-            <Consultation />
-            <Subscribe />
+            <section className="w-full relative py-10">
+                <div className="container flex justify-center items-center h-full">
+                    <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+                        <div className="w-full md:w-1/2 relative text-center md:text-left">
+                            <h1 className="mt-6 md:mt-0 z-10 text-center md:text-left">
+                                Supporting the Growth of Your Start-up
+                            </h1>
+                            <p className="my-5 md:my-6">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, amet iusto at voluptate id laborum suscipit aliquam perspiciatis molestiae tenetur voluptatibus in aut, earum vitae itaque sequi ut ad atque obcaecati eos iste quas corporis?
+                            </p>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Image src={banner} alt="banner" className="w-full md:h-[600px] h-[300px] object-contain" />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

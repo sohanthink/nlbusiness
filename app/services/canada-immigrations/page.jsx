@@ -69,13 +69,13 @@ const CanadaImmigrations = () => {
                         id: 1,
                         title: "Alberta Immigrant Nominee Program (AINP) – Entrepreneur Stream",
                         description: "Target your investment to Alberta province with our specialized business plan for the AINP Entrepreneur Stream.",
-                        href: "/services/canada-immigrations/alberta-entrepreneur"
+                        href: "/services/canada-immigrations/ainp-business-plan"
                     },
                     {
                         id: 2,
                         title: "BC Provincial Nominee Program (BC PNP) – Entrepreneur Immigration",
                         description: "Navigate British Columbia's entrepreneur immigration with our expert business planning services.",
-                        href: "/services/canada-immigrations/bc-pnp-entrepreneur"
+                        href: "/services/canada-immigrations/bcpnp-business-plan"
                     },
                     {
                         id: 3,
@@ -172,7 +172,7 @@ const CanadaImmigrations = () => {
             <Subscribe />
             <VisaPlan />
             <PopularVisa />
-            <Consultation sectionId="consultation" />
+            <Consultation />
         </>
     )
 }

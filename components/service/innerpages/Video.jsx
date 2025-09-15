@@ -19,14 +19,14 @@ const Video = ({
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
 
     return (
-        <div className="w-full relative h-[400px] md:h-[1000px]">
+        <div className="w-full relative min-h-[600px] md:min-h-[700px]">
             {/* Purple Background Section - BELOW the video (as per screenshot) */}
-            <div className={`w-full h-[250px] md:h-[500px] bg-primary absolute top-0 left-0 overflow-hidden`}>
+            <div className={`w-full h-[200px] md:h-[400px] bg-primary absolute top-0 left-0 overflow-hidden`}>
 
-                <Image src={videobanner} alt="videobanner" className="w-full h-full object-contain absolute inset-0" />
+                <Image src={videobanner} alt="videobanner" className="w-full h-full object-cover opacity-30 absolute inset-0" />
 
-                <div className="pt-14 z-[999]">
-                    <h2 className="!text-white text-center leading-tight animate-fade-in-up  drop-shadow-lg">
+                <div className="pt-8 md:pt-12 z-[999]">
+                    <h2 className="!text-white text-center leading-tight animate-fade-in-up drop-shadow-lg text-2xl md:text-3xl">
                         {title}
                     </h2>
                 </div>
@@ -37,9 +37,9 @@ const Video = ({
                 <div className="absolute top-1/2 right-20 w-8 h-8 bg-white/10 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
             </div>
             {/* Video Section - Centered in Container (ON TOP) */}
-            <div className="relative z-20 top-32 md:top-52">
+            <div className="relative z-20 top-24 md:top-38">
                 <div className="container">
-                    <div>
+                    <div className="max-w-4xl mx-auto">
                         {/* Video Player */}
                         <div className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500">
                             {/* Video Frame */}
