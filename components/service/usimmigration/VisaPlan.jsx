@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 
 import visaplan from "@/public/images/service/visaplan.png";
+import visaplan2 from "@/public/images/service/visaplan2.png";
 
 const VisaPlan = () => {
 
     return (
-        <section className="section-padding bg-gray/15">
+        <section className="section-padding bg-gray/10">
             <div className="container flex md:flex-row flex-col items-center justify-between gap-8 lg:gap-12">
                 {/* Left Content */}
                 <div className="md:w-1/2 w-full space-y-8">
@@ -23,7 +24,7 @@ const VisaPlan = () => {
                 <div className="md:w-1/2 w-full flex justify-end">
                     <div className="relative group">
                         <Image
-                            src={visaplan}
+                            src={visaplan2}
                             alt="Why choose us - Professional team collaboration"
                             width={500}
                             height={700}

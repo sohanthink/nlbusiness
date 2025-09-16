@@ -25,29 +25,28 @@ const Testimonial = () => {
         {
             id: 1,
             rating: 5,
-            content: "The courses provide excellent content and effective teaching methods, ensuring high-quality learning. With years of experience in firmware for industrial automation, the learner appreciated the deep dive into the STM32 family. Highly recommended for their great cost/benefit ratio.",
-            author: "Jhon Stokes",
-            position: "Founder",
-            company: "Texox",
-            image:
-                p1
+            content: "Business Venture Canada transformed our immigration journey. Their AINP business plan was so comprehensive and professionally crafted that it helped us secure our nomination in just 8 months. The team's expertise in Alberta's economic priorities made all the difference.",
+            author: "Sarah Chen",
+            position: "Entrepreneur",
+            company: "Tech Innovations Inc.",
+            image: p1
         },
         {
             id: 2,
             rating: 5,
-            content: "The courses have been invaluable, teaching me skills I use in personal projects and helping me secure a role as a software engineer. I continue taking them to enhance my expertise in embedded systems. I highly recommend these courses and appreciate Israel for sharing his knowledge!",
-            author: "Jhon Stokes",
-            position: "Founder",
-            company: "Texox",
+            content: "After struggling with generic business plan templates, we found Business Venture Canada. Their MPNP business plan was tailored specifically for Manitoba's market and helped us navigate the Exploratory Visit successfully. Highly professional and immigration-focused approach.",
+            author: "Michael Rodriguez",
+            position: "Business Owner",
+            company: "Manitoba Ventures",
             image: p2
         },
         {
             id: 3,
             rating: 5,
-            content: "The courses provide excellent content and effective teaching methods, ensuring high-quality learning. With years of experience in firmware for industrial automation, the learner appreciated the deep dive into the STM32 family. Highly recommended for their great cost/benefit ratio",
-            author: "Jhon",
-            position: "Founders",
-            company: "Texox",
+            content: "The E-2 visa business plan they created for our restaurant chain was exceptional. Every detail was meticulously researched, from market analysis to financial projections. We received our visa approval in record time. Truly immigration business plan experts.",
+            author: "Priya Patel",
+            position: "Restaurant Owner",
+            company: "Spice Garden Group",
             image: p1
         },
     ];

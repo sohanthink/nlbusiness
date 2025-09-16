@@ -77,20 +77,22 @@ const Navbar = () => {
     const menuItems = [
         { name: "Home", href: "/" },
         { name: "About Us", href: "/about" },
-        {
-            name: "Pages",
-            href: "#",
-            submenu: [
-                { name: "About Us", href: "/about" },
-                { name: "Our Team", href: "/teams" },
-                { name: "Contact Us", href: "/contact" },
-                { name: "Testimonials", href: "/testimonials" },
-                { name: "Blog", href: "/blogs" },
-                { name: "Careers", href: "/careers" },
-                { name: "Our Events", href: "/events" },
-            ],
-        },
+
+        // {
+        //     name: "Pages",
+        //     href: "#",
+        //     submenu: [
+        //         { name: "About Us", href: "/about" },
+        //         { name: "Our Team", href: "/teams" },
+        //         { name: "Contact Us", href: "/contact" },
+        //         { name: "Testimonials", href: "/testimonials" },
+        //         { name: "Blog", href: "/blogs" },
+        //         { name: "Careers", href: "/careers" },
+        //         { name: "Our Events", href: "/events" },
+        //     ],
+        // },
         { name: "Blog", href: "/blogs" },
+        { name: "Contact Us", href: "/contact" },
     ];
 
     const servicesData = {

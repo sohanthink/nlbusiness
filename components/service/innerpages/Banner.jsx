@@ -14,8 +14,8 @@ const Banner = ({ title, breadcrumb }) => {
                             {title}
                         </h1>
                         {/* Breadcrumb Navigation */}
-                        <nav className="mb-4">
-                            <ol className="flex items-center space-x-2 text-sm text-gray-600">
+                        <nav className="my-4">
+                            <ol className="underline flex items-center space-x-2 text-sm text-gray-600">
                                 <li>
                                     <a href="/" className="hover:text-purple-600 transition-colors">
                                         Home

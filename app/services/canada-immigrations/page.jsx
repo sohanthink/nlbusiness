@@ -35,7 +35,7 @@ const CanadaImmigrations = () => {
                 imageSrc={secretbanner}
                 imageAlt="Canada Immigration Services - Expert Business Plans"
             />
-            <Rush contactLink="#consultation" />
+            <Rush contactLink="/contact" />
             <Popular
                 title="Explore Popular Pathways to Canada"
                 description="Whether you aim to launch a tech startup in Ontario, invest in a franchise in Manitoba, or continue your professional practice in Quebec, we have the expertise to guide you."
@@ -111,7 +111,7 @@ const CanadaImmigrations = () => {
                         id: 8,
                         title: "Newfoundland & Labrador Provincial Nominee Program (NLPNP)",
                         description: "Start your business in Newfoundland & Labrador with our NLPNP International Entrepreneur plan.",
-                        href: "/services/canada-immigrations/newfoundland-entrepreneur"
+                        href: "/services/canada-immigrations/nlpnp-business-plan"
                     },
                     // Quebec Programs
                     {
@@ -172,7 +172,7 @@ const CanadaImmigrations = () => {
             <Subscribe />
             <VisaPlan />
             <PopularVisa />
-            <Consultation />
+            {/* <Consultation /> */}
         </>
     )
 }

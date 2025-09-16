@@ -57,4 +57,5 @@ export const defaultPhrasesToBold = [
   "Economic Priorities",
   "Regional Development",
   "Investment & Ownership",
+  "NLPNP",
 ];

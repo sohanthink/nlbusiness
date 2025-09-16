@@ -348,7 +348,7 @@ const PopularVisa = () => {
     const currentContent = getCategoryContent(selectedCategory)
 
     return (
-        <section className='bg-gray/15'>
+        <section className='bg-gray/10'>
             <div className="flex container section-padding">
                 {/* Left Panel */}
                 <div className="w-1/3 bg-white border-r border-gray-200 flex flex-col">

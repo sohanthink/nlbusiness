@@ -10,7 +10,7 @@ import React from 'react'
 const About = () => {
     return (
         <>
-            <Banner title="Your Journey is Our Mission: Building Business Venture Canada on a Foundation of Trust." breadcrumb="about" />
+            <Banner title="Business Venture Canada: Guiding Entrepreneurs with Trust." breadcrumb="about" />
             <Story />
             <MissionVission variant="mission" />
             <MissionVission variant="vision" />
