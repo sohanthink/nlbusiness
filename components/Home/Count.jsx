@@ -4,22 +4,22 @@ const Count = () => {
     const stats = [
         {
             id: 1,
-            number: "40,000+",
+            number: "2,000+",
             label: "Business Plans"
         },
         {
             id: 2,
-            number: "75+",
+            number: "15+",
             label: "Client Countries"
         },
         {
             id: 3,
-            number: "220+",
+            number: "100+",
             label: "Industries"
         },
         {
             id: 4,
-            number: "$300M+",
+            number: "$3M+",
             label: "Funding for Clients"
         }
     ];

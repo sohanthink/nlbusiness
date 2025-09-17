@@ -87,13 +87,13 @@ const CanadaImmigrations = () => {
                         id: 4,
                         title: "Ontario Immigrant Nominee Program (OINP) – Entrepreneur Stream",
                         description: "Launch your business in Ontario with our OINP Entrepreneur Stream business plan.",
-                        href: "/services/canada-immigrations/ontario-entrepreneur"
+                        href: "/services/canada-immigrations/oinp-business-plan"
                     },
                     {
                         id: 5,
                         title: "Saskatchewan Immigrant Nominee Program (SINP) – Entrepreneur Category",
                         description: "Explore Saskatchewan opportunities with our SINP Entrepreneur Category business plan.",
-                        href: "/services/canada-immigrations/saskatchewan-entrepreneur"
+                        href: "/services/canada-immigrations/sinp-business-plan"
                     },
                     {
                         id: 6,
@@ -150,13 +150,13 @@ const CanadaImmigrations = () => {
                         id: 14,
                         title: "Prince Edward Island Provincial Nominee Program (PEI PNP)",
                         description: "Make your business impact in PEI with our PEI PNP Business Impact Category plan.",
-                        href: "/services/canada-immigrations/pei-business"
+                        href: "/services/canada-immigrations/pei-pnp-business-plan"
                     },
                     {
                         id: 15,
                         title: "Northwest Territories Nominee Program (NTNP) – Business Stream",
                         description: "Explore Northern opportunities with our NTNP Business Stream business plan.",
-                        href: "/services/canada-immigrations/nwt-business"
+                        href: "/services/canada-immigrations/ntnp-business-plan"
                     },
                     {
                         id: 16,

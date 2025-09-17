@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { CiStar } from "react-icons/ci";
-import { FaQuoteRight } from "react-icons/fa";
+import { FaQuoteRight, FaLinkedin, FaCheckCircle } from "react-icons/fa";
 
 import Image from 'next/image';
 import p1 from '@/public/images/home/p1.png' // Adjust the path as necessary
@@ -27,18 +27,24 @@ const Testimonial = () => {
             rating: 5,
             content: "Business Venture Canada transformed our immigration journey. Their AINP business plan was so comprehensive and professionally crafted that it helped us secure our nomination in just 8 months. The team's expertise in Alberta's economic priorities made all the difference.",
             author: "Sarah Chen",
-            position: "Entrepreneur",
+            position: "Tech Entrepreneur",
             company: "Tech Innovations Inc.",
-            image: p1
+            image: p1,
+            verified: true,
+            linkedIn: true,
+            outcome: "AINP Approved - 8 months"
         },
         {
             id: 2,
             rating: 5,
             content: "After struggling with generic business plan templates, we found Business Venture Canada. Their MPNP business plan was tailored specifically for Manitoba's market and helped us navigate the Exploratory Visit successfully. Highly professional and immigration-focused approach.",
             author: "Michael Rodriguez",
-            position: "Business Owner",
+            position: "Manufacturing Owner",
             company: "Manitoba Ventures",
-            image: p2
+            image: p2,
+            verified: true,
+            linkedIn: true,
+            outcome: "MPNP Approved - 10 months"
         },
         {
             id: 3,
@@ -47,7 +53,46 @@ const Testimonial = () => {
             author: "Priya Patel",
             position: "Restaurant Owner",
             company: "Spice Garden Group",
-            image: p1
+            image: p1,
+            verified: true,
+            linkedIn: false,
+            outcome: "E-2 Visa Approved - 6 months"
+        },
+        {
+            id: 4,
+            rating: 5,
+            content: "Their EB-5 business plan exceeded all expectations. The market research was thorough, financial projections were realistic, and the job creation analysis was spot-on. Our I-526 petition was approved without any RFE. Outstanding immigration expertise.",
+            author: "James Wilson",
+            position: "Real Estate Developer",
+            company: "Wilson Development Group",
+            image: p2,
+            verified: true,
+            linkedIn: true,
+            outcome: "EB-5 I-526 Approved - 12 months"
+        },
+        {
+            id: 5,
+            rating: 5,
+            content: "We needed a business plan for BCPNP and they delivered beyond our expectations. The regional economic analysis was incredibly detailed and showed deep understanding of BC's priorities. Our nomination came through faster than anticipated.",
+            author: "Lisa Thompson",
+            position: "Healthcare Consultant",
+            company: "Pacific Health Solutions",
+            image: p1,
+            verified: true,
+            linkedIn: true,
+            outcome: "BCPNP Approved - 7 months"
+        },
+        {
+            id: 6,
+            rating: 5,
+            content: "Their L-1 visa business plan helped us establish our Canadian subsidiary successfully. The detailed operational plan and financial forecasts impressed both our investors and immigration officers. Professional service from start to finish.",
+            author: "David Kumar",
+            position: "Software Executive",
+            company: "Global Tech Solutions",
+            image: p2,
+            verified: true,
+            linkedIn: true,
+            outcome: "L-1 Visa Approved - 4 months"
         },
     ];
 
@@ -111,14 +156,20 @@ const Testimonial = () => {
                         {testimonials.map((testimonial) => (
                             <SwiperSlide key={testimonial.id}>
                                 <div className="bg-primary/5 relative m-5 md:m-0 p-8 rounded-lg h-full flex flex-col mb-10">
-                                    <div className="flex mb-4">
-                                        {[...Array(testimonial.rating)].map((_, i) => (
-                                            <span key={i} className="text-primary text-3xl"><CiStar />
-                                            </span>
-                                        ))}
+                                    {/* Header with stars and outcome badge */}
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className="flex mb-2">
+                                            {[...Array(testimonial.rating)].map((_, i) => (
+                                                <span key={i} className="text-yellow-400 text-2xl">★</span>
+                                            ))}
+                                        </div>
+                                        <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                                            ✓ {testimonial.outcome}
+                                        </div>
                                     </div>
 
-                                    <p className="text-gray mb-6 flex-grow text-xl">{testimonial.content}</p>
+                                    <p className="text-gray mb-6 flex-grow text-lg leading-relaxed">{testimonial.content}</p>
+
                                     {/* triangle shape */}
                                     <div className="absolute -bottom-12 left-10 w-20 h-12">
                                         <div className="shape bg-primary/5 w-full h-full"></div>
@@ -130,11 +181,26 @@ const Testimonial = () => {
                                 </div>
                                 <div className="mt-10 pl-14 md:pl-10 pt-5">
                                     <div className="flex items-center">
-                                        <div className="bg-gray-200 rounded-full w-15 h-15 flex items-center justify-center mr-4">
+                                        <div className="bg-gray-200 rounded-full w-15 h-15 flex items-center justify-center mr-4 relative">
                                             <Image src={testimonial.image} alt={testimonial.author} className="rounded-full" />
+                                            {testimonial.verified && (
+                                                <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
+                                                    <FaCheckCircle className="text-white text-xs" />
+                                                </div>
+                                            )}
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold text-primary text-2xl">{testimonial.author}</h4>
+                                        <div className="flex-grow">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <h4 className="font-bold text-primary text-xl">{testimonial.author}</h4>
+                                                {testimonial.linkedIn && (
+                                                    <FaLinkedin className="text-blue-600 text-sm" title="LinkedIn Verified" />
+                                                )}
+                                                {testimonial.verified && (
+                                                    <span className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">
+                                                        Verified Client
+                                                    </span>
+                                                )}
+                                            </div>
                                             <p className="text-gray-600 text-sm">
                                                 {testimonial.position} <span className="text-primary">@ {testimonial.company}</span>
                                             </p>
@@ -146,7 +212,7 @@ const Testimonial = () => {
                     </Swiper>
 
                     {/* Fixed pagination container */}
-                    <div className="testimonial-pagination absolute bottom-0 left-0 right-0 flex justify-center"></div>
+                    <div className="testimonial-pagination absolute -bottom-14 left-0 right-0 flex justify-center"></div>
 
                 </div>
 

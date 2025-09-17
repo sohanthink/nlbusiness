@@ -58,4 +58,7 @@ export const defaultPhrasesToBold = [
   "Regional Development",
   "Investment & Ownership",
   "NLPNP",
+  "OINP Entrepreneur Stream",
+  "oinp",
+  "SINP",
 ];

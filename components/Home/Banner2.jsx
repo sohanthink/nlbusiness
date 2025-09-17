@@ -53,7 +53,7 @@ const Banner2 = () => {
                         </span>
                     </h1>
                     <p className="text-xl text-gray max-w-3xl mx-auto leading-relaxed">
-                        Strategic business plans for global ventures and visa success. We turn your ambitious visions into validated, immigration-ready strategies that open doors to new opportunities worldwide.
+                        Experts in investor business plans, startup visa documentation, and strategic immigration planning.
                     </p>
                 </motion.div>
 

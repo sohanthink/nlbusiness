@@ -3,7 +3,6 @@
 import Banner from "@/components/Home/Banner";
 import BannerCard from "@/components/Home/BannerCard";
 import Built from "@/components/Home/Built";
-import HomeVideo from "@/components/Home/HomeVideo";
 import Solution from "@/components/Home/Solution";
 import Team from "@/components/Team";
 import React from "react";
@@ -18,6 +17,7 @@ import Step from "@/components/service/usimmigration/Step";
 import WhyChooseUs from "@/components/about/WhyChooseUs";
 import Banner2 from "@/components/Home/Banner2";
 import Value from "@/components/Home/Value";
+import CaseStudy from "@/components/Home/CaseStudy";
 
 const page = () => {
   const bannerCardRef = useRef(null);
@@ -84,16 +84,8 @@ const page = () => {
       </motion.div>
 
       <Testimonial />
-      <motion.div
-        ref={homeVideoRef}
-        initial="hidden"
-        animate={isHomeVideoInView ? "visible" : "hidden"}
-        variants={fadeInUp}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <HomeVideo />
-      </motion.div>
 
+      <CaseStudy />
       <motion.div
         ref={teamRef}
         initial="hidden"
