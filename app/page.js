@@ -17,6 +17,7 @@ import Blog from "@/components/common/Blog";
 import Step from "@/components/service/usimmigration/Step";
 import WhyChooseUs from "@/components/about/WhyChooseUs";
 import Banner2 from "@/components/Home/Banner2";
+import Value from "@/components/Home/Value";
 
 const page = () => {
   const bannerCardRef = useRef(null);
@@ -60,7 +61,7 @@ const page = () => {
         <BannerCard />
       </motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         ref={builtRef}
         initial="hidden"
         animate={isBuiltInView ? "visible" : "hidden"}
@@ -68,7 +69,9 @@ const page = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <Built />
-      </motion.div>
+      </motion.div> */}
+
+      <Value />
 
       <motion.div
         ref={solutionRef}

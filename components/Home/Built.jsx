@@ -1,48 +1,95 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 import builtbanner from "@/public/images/home/builtbanner.png";
+import builtbanner2 from "@/public/images/home/builtbanner2.png";
 import icon1 from "@/public/images/home/builticon1.svg";
 import icon2 from "@/public/images/home/builticon2.svg";
 
 const Built = () => {
     return (
         <section className="container section-padding">
-            <div className="flex md:flex-row flex-col items-center gap-2 ">
-                <div className="md:w-1/2 w-full">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Left Image */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="flex justify-center"
+                >
                     <Image
-                        src={builtbanner}
-                        alt="builtbanner"
-                        className="md:w-[75%] w-full h-full object-cover"
+                        src={builtbanner2}
+                        alt="Business Plan Banner"
+                        className="rounded-2xl shadow-lg w-full md:w-[90%] h-auto object-cover"
+                        priority
                     />
-                </div>
-                <div className="md:w-1/2 w-full space-y-7 pt-5 md:pt-0">
-                    <h2 className="!text-black"> One Plan, Two Objectives: Immigration Compliance and Business Growth</h2>
-                    <p className="text-gray">
-                        Whether your goal is to secure a visa or secure funding, the foundation is the same: a credible, persuasive, and financially sound business plan. Our team of senior analysts and strategists combines expertise in international immigration law with sharp business acumen. We don't just write documents; we build strategic roadmaps for your success.
+                </motion.div>
+
+                {/* Right Content */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="space-y-8"
+                >
+                    <h2 className="text-3xl md:text-4xl font-bold text-black">
+                        One Plan, Two Objectives: <br />
+                        <span className="text-primary">
+                            Immigration Compliance & Business Growth
+                        </span>
+                    </h2>
+
+                    <p className="text-gray-600 leading-relaxed max-w-lg">
+                        A single plan can open doors to visas and funding alike. Our senior
+                        strategists combine immigration expertise with sharp business
+                        acumen—building not just documents, but <span className="font-semibold">strategic roadmaps</span> for your
+                        success.
                     </p>
-                    <div className="space-y-5">
-                        <div className="flex justify-between gap-5 ">
-                            <Image src={icon1} alt="icon1" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
-                            <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Dual-Purpose Expertise:</h3>
-                                <p className="text-gray">
-                                    Plans are crafted to satisfy government immigration officers and discerning investors simultaneously.
+
+                    {/* Features */}
+                    <div className="space-y-6">
+                        {/* Feature 1 */}
+                        <div className="flex gap-4 items-start">
+                            <div className="flex-shrink-0">
+                                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-md">
+                                    <Image src={icon1} alt="Dual-Purpose" width={28} height={28} />
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="font-semibold text-lg">Dual-Purpose Expertise</h3>
+                                <p className="text-gray-600 text-sm">
+                                    Crafted to satisfy both immigration officers and discerning
+                                    investors at once.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-between gap-5">
-                            <Image src={icon2} alt="icon2" width={50} height={50} className="w-14 h-14 bg-primary p-3 rounded-full" />
-                            <div className="space-y-2 md:space-y-4">
-                                <h3 className="font-bold text-xl">Market-Led Financial Modeling:</h3>
-                                <p className="text-gray">
-                                    We develop realistic, defensible financial projections—including P&L, Cash Flow, and Balance Sheets—based on real-world data.
+
+                        {/* Feature 2 */}
+                        <div className="flex gap-4 items-start">
+                            <div className="flex-shrink-0">
+                                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-md">
+                                    <Image src={icon2} alt="Financial Modeling" width={28} height={28} />
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="font-semibold text-lg">
+                                    Market-Led Financial Modeling
+                                </h3>
+                                <p className="text-gray-600 text-sm">
+                                    Realistic, defensible projections—P&L, Cash Flow, Balance
+                                    Sheets—based on real-world data.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <button className="primary-button bg-dark">Explore Our Methodology</button>
-                </div>
+
+                    <button className="primary-button bg-dark px-6 py-3 rounded-xl shadow-md hover:bg-primary transition">
+                        Explore Our Methodology
+                    </button>
+                </motion.div>
             </div>
         </section>
     );
