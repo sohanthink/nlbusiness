@@ -61,4 +61,8 @@ export const defaultPhrasesToBold = [
   "OINP Entrepreneur Stream",
   "oinp",
   "SINP",
+  "YBNP",
+  "Canada's",
+  "Québec Entrepreneur Program",
+  "Québec Investor Program",
 ];

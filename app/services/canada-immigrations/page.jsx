@@ -118,7 +118,7 @@ const CanadaImmigrations = () => {
                         id: 9,
                         title: "Québec Entrepreneur Program – Start-up",
                         description: "Navigate Quebec's distinct immigration system with our Quebec Entrepreneur Program business plan.",
-                        href: "/services/canada-immigrations/quebec-entrepreneur"
+                        href: "/services/canada-immigrations/quebec-entrepreneur-program"
                     },
                     {
                         id: 10,
@@ -162,7 +162,7 @@ const CanadaImmigrations = () => {
                         id: 16,
                         title: "Yukon Business Nominee Program (YBNP)",
                         description: "Start your business in Yukon with our YBNP business planning services.",
-                        href: "/services/canada-immigrations/yukon-business"
+                        href: "/services/canada-immigrations/ybnp-business-plan"
                     }
                 ]}
             />

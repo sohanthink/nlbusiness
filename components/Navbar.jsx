@@ -150,7 +150,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white w-full top-0 z-50 duration-50 bg-dark" ref={menuRef}>
+        <nav className="w-[90%] absolute mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
             <div className="container mx-auto px-4 lg:px-2">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     {/* Logo - Left Side */}

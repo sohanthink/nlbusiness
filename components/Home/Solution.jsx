@@ -80,9 +80,10 @@ export const Card = ({ src, heading, description, bullets, ctaText, ctaLink }) =
                     <div className="mt-auto pt-4">
                         <Link
                             href={ctaLink}
-                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center w-full"
+                            className="inline-block bg-primary hover:bg-primary/80 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center w-full"
                         >
                             {ctaText}
+
                         </Link>
                     </div>
                 )}

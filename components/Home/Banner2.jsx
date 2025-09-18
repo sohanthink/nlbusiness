@@ -23,9 +23,9 @@ const Banner2 = () => {
             description: "Proven track record of helping entrepreneurs achieve their dreams"
         }
     ];
-
+    // bg-gradient-to-br from-slate-50 via-white to-purple-50
     return (
-        <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 relative overflow-hidden">
+        <section className="min-h-screen m-5 relative overflow-hidden bg-gradient-to-tr from-[#90FF81]/20 to-[#90FF81]/80  rounded-lg">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-primary/10"></div>
             <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-3xl"></div>
@@ -38,7 +38,7 @@ const Banner2 = () => {
                 <path d="M100,400 Q300,100 500,400 T900,400" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary/25" />
             </svg>
 
-            <div className="container mx-auto px-4 py-20 relative z-10">
+            <div className="container mx-auto px-4 relative z-10 flex flex-col justify-center min-h-screen">
                 {/* Header */}
                 <motion.div
                     className="text-center mb-16"
@@ -46,9 +46,9 @@ const Banner2 = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                         Your Journey to
-                        <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
                             Global Success
                         </span>
                     </h1>
