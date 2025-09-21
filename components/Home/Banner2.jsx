@@ -25,7 +25,7 @@ const Banner2 = () => {
     ];
     // bg-gradient-to-br from-slate-50 via-white to-purple-50
     return (
-        <section className="min-h-screen m-5 relative overflow-hidden bg-gradient-to-tr from-[#90FF81]/20 to-[#90FF81]/80  rounded-lg">
+        <section className="min-h-screen m-5 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-purple-50  rounded-lg">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-primary/10"></div>
             <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-3xl"></div>

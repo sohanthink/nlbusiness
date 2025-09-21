@@ -99,9 +99,9 @@ const Navbar = () => {
         canadaImmigration: [
             { name: "Alberta Immigrant Nominee Program (AINP)", href: "/services/canada-immigrations/ainp-business-plan" },
             { name: "BC Provincial Nominee Program (BC PNP)", href: "/services/canada-immigrations/bcpnp-business-plan" },
-            { name: "Québec Entrepreneur Program", href: "/services/uk-immigrations/quebec-entrepreneur-program" },
-            { name: "Québec Investor Program (may be suspended or revised)", href: "/services/uk-immigrations/Quebec-Investor-Program" },
-            { name: "Self-Employed Persons Program", href: "/services/uk-immigrations/self-employed-persons program" },
+            { name: "Québec Entrepreneur Program", href: "/services/canada-immigrations/quebec-entrepreneur-program" },
+            { name: "Québec Investor Program (may be suspended or revised)", href: "/services/canada-immigrations/quebec-investor-plan" },
+            { name: "Self-Employed Persons Program", href: "/services/canada-immigrations/self-employed-programme" },
         ],
         ukImmigration: [
             { name: "Innovator Founder Visa Business Plan", href: "/services/uk-immigrations/innovator-founder-visa-business-plan" },
@@ -151,7 +151,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-[90%] absolute mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
-            <div className="container mx-auto px-4 lg:px-2">
+            <div className=" mx-auto px-4 lg:px-2">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     {/* Logo - Left Side */}
                     <Link
@@ -217,7 +217,7 @@ const Navbar = () => {
 
                             {/* Mega Menu*/}
                             <div
-                                className={`fixed left-1/2 top-1/2 py-12 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-screen max-w-7xl bg-[#f8fbff] shadow-lg transition-all duration-300 p-6 overflow-hidden ${isMegaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                                className={`fixed left-1/2 top-24 transform -translate-x-1/2 z-[60] w-screen max-w-7xl bg-[#f8fbff] shadow-lg transition-all duration-300 p-6 overflow-hidden rounded-lg ${isMegaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                                 onMouseLeave={() => setIsMegaMenuOpen(false)}
                             >
                                 <div className="container mx-auto px-8 h-full">

@@ -124,26 +124,26 @@ const CanadaImmigrations = () => {
                         id: 10,
                         title: "Québec Investor Program",
                         description: "Explore Quebec investment opportunities with our Quebec Investor Program business plan.",
-                        href: "/services/canada-immigrations/quebec-investor"
+                        href: "/services/canada-immigrations/quebec-investor-plan"
                     },
                     {
                         id: 11,
                         title: "Québec Self-Employed Worker Program",
                         description: "Continue your professional practice in Quebec with our Self-Employed Worker Program plan.",
-                        href: "/services/canada-immigrations/quebec-self-employed"
+                        href: "/services/canada-immigrations/quebec-self-employed-pan"
                     },
                     // Federal Programs
                     {
                         id: 12,
                         title: "Start-Up Visa Program (for innovative entrepreneurs)",
                         description: "Launch your innovative startup in Canada with our Federal Start-Up Visa Program business plan.",
-                        href: "/services/canada-immigrations/startup-visa"
+                        href: "/services/canada-immigrations/startup-visa-business-plan"
                     },
                     {
                         id: 13,
                         title: "Self-Employed Persons Program",
                         description: "Continue your cultural or athletic career in Canada with our Self-Employed Persons Program plan.",
-                        href: "/services/canada-immigrations/self-employed"
+                        href: "/services/canada-immigrations/self-employed-programme"
                     },
                     // Additional Provincial Programs
                     {
