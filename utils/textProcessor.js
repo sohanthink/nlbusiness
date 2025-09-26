@@ -65,4 +65,5 @@ export const defaultPhrasesToBold = [
   "Canada's",
   "Québec Entrepreneur Program",
   "Québec Investor Program",
+  "franchisor",
 ];

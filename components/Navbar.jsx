@@ -308,28 +308,35 @@ const Navbar = () => {
                                                 Advisory
                                             </h3>
 
-                                            {/* Start-Up */}
+                                            {/* Start-Up Advisory */}
                                             <div>
                                                 <Link href="/services/advisory/startup" className="block">
                                                     <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-green-600 transition-colors duration-200 cursor-pointer">
-                                                        Start-Up
+                                                        Start-Up Advisory
                                                     </h4>
                                                 </Link>
                                                 <ul className="space-y-2">
-                                                    {servicesData.advisory.startUp.slice(0, 3).map((item) => (
-                                                        <li key={item.name}>
-                                                            <Link
-                                                                href={item.href}
-                                                                onClick={handleMegaMenuItemClick}
-                                                                className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
-                                                            >
-                                                                {item.name}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
                                                     <li>
                                                         <Link
-                                                            href="/advisory/startup"
+                                                            href="/services/advisory/startup/financial-model"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Financial Model
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/startup/investor-business-plan"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Investor Business Plan
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/startup"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >
@@ -339,28 +346,111 @@ const Navbar = () => {
                                                 </ul>
                                             </div>
 
-                                            {/* M&A */}
+                                            {/* Digital Marketing */}
                                             <div>
-                                                <Link href="/advisory/ma" className="block">
-                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-purple-600 transition-colors duration-200 cursor-pointer">
-                                                        M&A
+                                                <Link href="/services/advisory/digital-marketing" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-blue-600 transition-colors duration-200 cursor-pointer">
+                                                        Digital Marketing
                                                     </h4>
                                                 </Link>
                                                 <ul className="space-y-2">
-                                                    {servicesData.ma.slice(0, 3).map((item) => (
-                                                        <li key={item.name}>
-                                                            <Link
-                                                                href={item.href}
-                                                                onClick={handleMegaMenuItemClick}
-                                                                className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
-                                                            >
-                                                                {item.name}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
                                                     <li>
                                                         <Link
-                                                            href="/advisory/ma"
+                                                            href="/services/advisory/digital-marketing/content-writing"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Content Writing
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/digital-marketing/logo-design"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Logo, Images, Design
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/digital-marketing"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* M&A Firms */}
+                                            <div>
+                                                <Link href="/services/advisory/ma" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-purple-600 transition-colors duration-200 cursor-pointer">
+                                                        M&A Firms
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/ma/confidential-information-memorandum"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Confidential Information Memorandum (CIM)
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/ma/buyers-list"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Buyers List
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/ma"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* Premium Market Research */}
+                                            <div>
+                                                <Link href="/services/advisory/market-research" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-orange-600 transition-colors duration-200 cursor-pointer">
+                                                        Premium Market Research
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/market-research/market-overview"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-orange-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Market Overview
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/market-research/competitive-analysis"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-orange-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Competitive Analysis
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/advisory/market-research"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >
@@ -377,28 +467,99 @@ const Navbar = () => {
                                             <h3 className="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
                                                 Small Business
                                             </h3>
-                                            <ul className="space-y-2">
-                                                {servicesData.advisory.smallBusiness.map((item) => (
-                                                    <li key={item.name}>
+                                            {/* Business Plans for Small Business */}
+                                            <div>
+                                                <Link href="/services/small-business/business-plans" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-green-600 transition-colors duration-200 cursor-pointer">
+                                                        Business Plans for Small Business
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    <li>
                                                         <Link
-                                                            href={item.href}
+                                                            href="/services/small-business/business-plans/bank-loan-business-plan"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
                                                         >
-                                                            {item.name}
+                                                            Bank Loan Business Plan
                                                         </Link>
                                                     </li>
-                                                ))}
-                                                <li>
-                                                    <Link
-                                                        href="/advisory/small-business"
-                                                        onClick={handleMegaMenuItemClick}
-                                                        className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
-                                                    >
-                                                        View all →
-                                                    </Link>
-                                                </li>
-                                            </ul>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/business-plans/grant-business-plan"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Grant Business Plan
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/business-plans/landlord-deck"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Landlord Deck
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/business-plans"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            {/* Franchisor Master Business Plan Package */}
+                                            <div>
+                                                <Link href="/services/small-business/franchisor" className="block">
+                                                    <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-blue-600 transition-colors duration-200 cursor-pointer">
+                                                        Franchisor Master Business Plan Package
+                                                    </h4>
+                                                </Link>
+                                                <ul className="space-y-2">
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/franchisor/franchisor-master-business-plan"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Franchisor Master Business Plan
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/franchisor/financial-model"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Franchisor Financial Model
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/franchisor/pitch-deck"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
+                                                        >
+                                                            Pitch Deck (Franchisees)
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/small-business/franchisor"
+                                                            onClick={handleMegaMenuItemClick}
+                                                            className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
+                                                        >
+                                                            View all →
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
 
                                             {/* Social Media Buttons */}
                                             <div className="mt-6 pt-4 border-t border-gray-200">
@@ -673,3 +834,12 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ import innerpagebannerlogo from '@/public/images/service/innerpages/innerpageban
 
 const Banner = ({ title, breadcrumb }) => {
     return (
-        <div className="bg-white py-20 md:py-32">
+        <div className="bg-white py-20 md:py-52">
             {/* Banner Section */}
             <div className="relative bg-white">
                 <div className="container">

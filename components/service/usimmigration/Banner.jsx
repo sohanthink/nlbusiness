@@ -50,7 +50,7 @@ const Banner = ({ title, description, src, btnLink, btnCn, btnText }) => {
     ];
 
     return (
-        <section className="w-full relative py-10">
+        <section className="w-full relative mt-24 py-10">
             <div className="container flex justify-center items-center h-full">
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                     <div className="w-full md:w-1/2 relative text-center md:text-left">
