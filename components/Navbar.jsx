@@ -423,7 +423,7 @@ const Navbar = () => {
                                             </div>
 
                                             {/* Premium Market Research */}
-                                            <div>
+                                            {/* <div>
                                                 <Link href="/services/advisory/market-research" className="block">
                                                     <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-orange-600 transition-colors duration-200 cursor-pointer">
                                                         Premium Market Research
@@ -458,7 +458,7 @@ const Navbar = () => {
                                                         </Link>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div> */}
 
                                         </div>
 
@@ -533,7 +533,7 @@ const Navbar = () => {
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/franchisor/financial-model"
+                                                            href="/services/small-business/franchisor/franchisor-financial-model"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
                                                         >
@@ -542,16 +542,7 @@ const Navbar = () => {
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/franchisor/pitch-deck"
-                                                            onClick={handleMegaMenuItemClick}
-                                                            className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
-                                                        >
-                                                            Pitch Deck (Franchisees)
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link
-                                                            href="/services/small-business/franchisor"
+                                                            href="/services/small-business/franchisor#all-services"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >
@@ -610,13 +601,13 @@ const Navbar = () => {
                                             <div className="flex items-center gap-4">
                                                 <div className="w-px h-6 bg-gray-300"></div>
                                                 <div className="flex items-center gap-3">
-                                                    <span className="text-sm text-gray-700">Want to better support your clients?</span>
+                                                    <span className="text-sm text-gray-700">Looking for more services?</span>
                                                     <Link
-                                                        href="/become-partner"
+                                                        href="/services"
                                                         onClick={handleMegaMenuItemClick}
                                                         className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-200"
                                                     >
-                                                        Become a Partner
+                                                        Check All Our Services
                                                     </Link>
                                                 </div>
                                             </div>
