@@ -14,8 +14,8 @@ import Why from '@/components/service/usimmigration/Why'
 import banner from "@/public/images/services/small-business/franchisor/franchisor-banner.png";
 import secretbanner from "@/public/images/services/small-business/franchisor/franchisor-secret.png";
 import popularbanner from "@/public/images/service/popular.png";
-import popular1 from "@/public/images/services/small-business/franchisor/franchisor-plan.png";
-import popular2 from "@/public/images/services/small-business/franchisor/financial-model.png";
+import popular2 from "@/public/images/services/small-business/franchisor/financialmodel/popular2.png";
+import popular1 from "@/public/images/services/small-business/franchisor/financialmodel/popular1.png";
 
 const FranchisorAdvisory = () => {
     return (
@@ -46,19 +46,19 @@ const FranchisorAdvisory = () => {
                     title: "Franchisor Master Business Plan",
                     description: "Strategic blueprint detailing your franchise concept, market positioning, expansion roadmap, and operational systems for scalable growth.",
                     alt: "Franchisor Master Business Plan",
-                    href: "/services/advisory/franchisor-master-business-plan"
+                    href: "/services/small-business/franchisor/franchisor-master-business-plan"
                 }}
                 card2={{
                     image: popular2,
                     title: "Franchisor Financial Modeling",
                     description: "Comprehensive financial projections, unit economics, royalty structures, and investment analysis for franchise system viability.",
                     alt: "Franchisor Financial Model",
-                    href: "/services/advisory/franchisor-financial-model"
+                    href: "/services/small-business/franchisor/franchisor-financial-model"
                 }}
                 centerCard={{
                     title: "Franchisee Acquisition Pitch Deck",
                     description: "Professional presentation materials and recruitment strategies designed to attract and convert qualified franchisee candidates.",
-                    href: "/services/advisory/franchisee-pitch-deck"
+                    href: "/services/small-business/franchisor/pitch-deck"
                 }}
                 backgroundImage={popularbanner}
             />

@@ -58,228 +58,201 @@ const Contact = ({
     }
 
     return (
-        <section id='consultation' className="container section-padding bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <section id='consultation'>
+            <div className="container section-padding bg-white pt-[66px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
-                {/* Left Content Section */}
-                <div className="space-y-8">
-                    {/* Title and Description */}
-                    <div className="space-y-6">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                            {title}
-                        </h2>
-                        <p className="text-lg text-gray-600 leading-relaxed">
-                            {subtitle}
-                        </p>
-                    </div>
+                    {/* Left Content Section */}
+                    <div className="space-y-8">
+                        {/* Title and Description */}
+                        <div className="space-y-6">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                                {title}
+                            </h2>
+                            <p className="text-lg text-gray-600 leading-relaxed">
+                                {subtitle}
+                            </p>
+                        </div>
 
-                    {/* Images Section */}
-                    <div className="relative">
-                        {/* <div className="flex gap-4">
-                            <div className="relative flex-1">
-                                <div className="relative overflow-hidden rounded-lg shadow-lg">
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                        alt="Team collaboration"
-                                        width={300}
-                                        height={200}
-                                        className="w-full h-48 object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                                </div>
+                        {/* Images Section */}
+                        <div className="relative">
+                            <div>
+                                <Image src={contactbanner} alt="contactbanner" />
                             </div>
-
-                            <div className="relative flex-1">
-                                <div className="relative overflow-hidden rounded-lg shadow-lg">
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                        alt="Team discussion"
-                                        width={300}
-                                        height={200}
-                                        className="w-full h-48 object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                                </div>
-                            </div>
-                        </div> */}
-
-                        <div>
-                            <Image src={contactbanner} alt="contactbanner" />
                         </div>
                     </div>
-                </div>
 
-                {/* Right Contact Form Section */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Right Contact Form Section */}
+                    <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
+                        <form onSubmit={handleSubmit} className="space-y-6">
 
-                        {/* Name Field */}
-                        <div className="relative">
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Name *
-                            </label>
+                            {/* Name Field */}
                             <div className="relative">
-                                <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleInputChange}
-                                    placeholder="Your Name"
-                                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        {/* Email Field */}
-                        <div className="relative">
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Email *
-                            </label>
-                            <div className="relative">
-                                <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    placeholder="demo@"
-                                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        {/* Phone Field */}
-                        <div className="relative">
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Phone *
-                            </label>
-                            <div className="flex gap-2">
-                                <div className="relative flex-shrink-0">
-                                    <select
-                                        name="countryCode"
-                                        value={formData.countryCode}
-                                        onChange={handleInputChange}
-                                        className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-white"
-                                    >
-                                        <option value="+1">🇺🇸 +1</option>
-                                        <option value="+44">🇬🇧 +44</option>
-                                        <option value="+91">🇮🇳 +91</option>
-                                        <option value="+86">🇨🇳 +86</option>
-                                    </select>
-                                    <FaChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
-                                </div>
-                                <div className="relative flex-1">
-                                    <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Name *
+                                </label>
+                                <div className="relative">
+                                    <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                                     <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
                                         onChange={handleInputChange}
-                                        placeholder="Phone Number"
+                                        placeholder="Your Name"
                                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                         required
                                     />
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Source Field */}
-                        <div className="relative">
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                How did you find out about us? *
-                            </label>
+                            {/* Email Field */}
                             <div className="relative">
-                                <select
-                                    name="source"
-                                    value={formData.source}
-                                    onChange={handleInputChange}
-                                    className="w-full pl-4 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-white"
-                                    required
-                                >
-                                    <option value="">Select a Answer</option>
-                                    <option value="google">Google Search</option>
-                                    <option value="social">Social Media</option>
-                                    <option value="referral">Referral</option>
-                                    <option value="advertisement">Advertisement</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Email *
+                                </label>
+                                <div className="relative">
+                                    <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        placeholder="demo@"
+                                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        required
+                                    />
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Research Types */}
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-3">
-                                What research report types are you interested in? *
-                            </label>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                {researchOptions.map((option) => (
-                                    <label key={option} className="flex items-center space-x-2 cursor-pointer">
-                                        <input
-                                            type="checkbox"
-                                            name="researchTypes"
-                                            value={option}
-                                            checked={formData.researchTypes.includes(option)}
+                            {/* Phone Field */}
+                            <div className="relative">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Phone *
+                                </label>
+                                <div className="flex gap-2">
+                                    <div className="relative flex-shrink-0">
+                                        <select
+                                            name="countryCode"
+                                            value={formData.countryCode}
                                             onChange={handleInputChange}
-                                            className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                            className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-white"
+                                        >
+                                            <option value="+1">🇺🇸 +1</option>
+                                            <option value="+44">🇬🇧 +44</option>
+                                            <option value="+91">🇮🇳 +91</option>
+                                            <option value="+86">🇨🇳 +86</option>
+                                        </select>
+                                        <FaChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                    </div>
+                                    <div className="relative flex-1">
+                                        <FaPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            placeholder="Phone Number"
+                                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                            required
                                         />
-                                        <span className="text-sm text-gray-700">{option}</span>
-                                    </label>
-                                ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Message Field */}
-                        <div className="relative">
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Message
-                            </label>
+                            {/* Source Field */}
                             <div className="relative">
-                                <FaPen className="absolute left-3 top-3 text-gray-400" />
-                                <textarea
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleInputChange}
-                                    placeholder="Write Message"
-                                    rows={4}
-                                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                                ></textarea>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                    How did you find out about us? *
+                                </label>
+                                <div className="relative">
+                                    <select
+                                        name="source"
+                                        value={formData.source}
+                                        onChange={handleInputChange}
+                                        className="w-full pl-4 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none bg-white"
+                                        required
+                                    >
+                                        <option value="">Select a Answer</option>
+                                        <option value="google">Google Search</option>
+                                        <option value="social">Social Media</option>
+                                        <option value="referral">Referral</option>
+                                        <option value="advertisement">Advertisement</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Privacy Consent */}
-                        <div className="flex items-start space-x-2">
-                            <input
-                                type="checkbox"
-                                name="privacyConsent"
-                                checked={formData.privacyConsent}
-                                onChange={handleInputChange}
-                                className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2 mt-1"
-                                required
-                            />
-                            <label className="text-sm text-gray-600">
-                                By clicking "Get a Quote" you agree to our{' '}
-                                <a href="/privacy-policy" className="text-red-500 hover:text-red-600 underline">
-                                    Privacy Policy
-                                </a>
-                                .
-                            </label>
-                        </div>
+                            {/* Research Types */}
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                    What research report types are you interested in? *
+                                </label>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    {researchOptions.map((option) => (
+                                        <label key={option} className="flex items-center space-x-2 cursor-pointer">
+                                            <input
+                                                type="checkbox"
+                                                name="researchTypes"
+                                                value={option}
+                                                checked={formData.researchTypes.includes(option)}
+                                                onChange={handleInputChange}
+                                                className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                            />
+                                            <span className="text-sm text-gray-700">{option}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
 
-                        {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors duration-300 transform hover:scale-[1.02]"
-                        >
-                            GET QUOTE
-                        </button>
-                    </form>
+                            {/* Message Field */}
+                            <div className="relative">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Message
+                                </label>
+                                <div className="relative">
+                                    <FaPen className="absolute left-3 top-3 text-gray-400" />
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        placeholder="Write Message"
+                                        rows={4}
+                                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            {/* Privacy Consent */}
+                            <div className="flex items-start space-x-2">
+                                <input
+                                    type="checkbox"
+                                    name="privacyConsent"
+                                    checked={formData.privacyConsent}
+                                    onChange={handleInputChange}
+                                    className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2 mt-1"
+                                    required
+                                />
+                                <label className="text-sm text-gray-600">
+                                    By clicking "Get a Quote" you agree to our{' '}
+                                    <a href="/privacy-policy" className="text-red-500 hover:text-red-600 underline">
+                                        Privacy Policy
+                                    </a>
+                                    .
+                                </label>
+                            </div>
+
+                            {/* Submit Button */}
+                            <button
+                                type="submit"
+                                className="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors duration-300 transform hover:scale-[1.02]"
+                            >
+                                GET QUOTE
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
         </section>
     )
 }

@@ -65,7 +65,7 @@ const Consultation = ({ sectionId = "consultation" }) => {
     }
 
     return (
-        <section id={sectionId} className="bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        <section id={sectionId} className="mt-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
             <div className="container section-padding">
                 {/* Contact Cards Section */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
