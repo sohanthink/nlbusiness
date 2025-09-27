@@ -217,7 +217,7 @@ const Navbar = () => {
 
                             {/* Mega Menu*/}
                             <div
-                                className={`fixed left-1/2 top-24 transform -translate-x-1/2 z-[60] w-screen max-w-7xl bg-[#f8fbff] shadow-lg transition-all duration-300 p-6 overflow-hidden rounded-lg ${isMegaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                                className={`fixed left-1/2 top-24 transform -translate-x-1/2 z-[60] w-screen max-w-[95%] bg-[#f8fbff] shadow-2xl transition-all duration-300 p-6 overflow-hidden rounded-lg ${isMegaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                                 onMouseLeave={() => setIsMegaMenuOpen(false)}
                             >
                                 <div className="container mx-auto px-8 h-full">
@@ -542,7 +542,7 @@ const Navbar = () => {
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/franchisor#all-services"
+                                                            href="/services/small-business/franchisor#popular"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >

@@ -63,7 +63,7 @@ const FranchisorAdvisory = () => {
                 backgroundImage={popularbanner}
             />
 
-            <AllImmigration
+            {/* <AllImmigration
                 title="Franchisor Advisory Services"
                 sectionId="all-services"
                 businessPlans={[
@@ -86,30 +86,8 @@ const FranchisorAdvisory = () => {
                         description: "Compelling presentation tools and marketing materials for effective franchisee acquisition.",
                         href: "/services/advisory/franchisee-pitch-deck"
                     },
-                    // Additional Franchise Services
-                    {
-                        id: 4,
-                        title: "Franchise Operations Manual Development",
-                        description: "Detailed operational guidelines ensuring brand consistency across all franchise locations.",
-                        href: "/services/advisory/franchise-operations-manual",
-                        comingSoon: true
-                    },
-                    {
-                        id: 5,
-                        title: "Franchise Territory Planning & Analysis",
-                        description: "Strategic territory mapping, demographic analysis, and market saturation studies.",
-                        href: "/services/advisory/franchise-territory-planning",
-                        comingSoon: true
-                    },
-                    {
-                        id: 6,
-                        title: "Franchise Legal Structure Advisory",
-                        description: "Franchise agreement development and regulatory compliance guidance.",
-                        href: "/services/advisory/franchise-legal-advisory",
-                        comingSoon: true
-                    }
                 ]}
-            />
+            /> */}
 
             <Testimonial />
             <Why />

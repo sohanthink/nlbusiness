@@ -39,7 +39,7 @@ const Popular = ({
     const finalCenterCard = centerCard || defaultCenterCard;
     const finalBackgroundImage = backgroundImage || popularbanner;
     return (
-        <section className="w-full relative py-16">
+        <section id='popular' className="w-full relative py-16">
             {/* Background Banner Image */}
             <div className="absolute inset-0 opacity-40 z-0 w-full h-full">
                 <Image
