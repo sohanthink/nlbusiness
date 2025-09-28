@@ -77,9 +77,9 @@ const Value = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-full px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300 group"
+                                    className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-full md:px-4 px-2 md:py-3 py-2 shadow-md hover:shadow-lg transition-all duration-300 group"
                                 >
-                                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                    <div className="md:w-8 md:h-8 w-3 h-3 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                         {point.icon}
                                     </div>
                                     <span className="text-sm font-semibold text-gray-900">

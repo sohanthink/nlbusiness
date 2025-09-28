@@ -73,7 +73,7 @@ const ServicesByCategoryGrid = () => {
             color: 'from-indigo-500 via-indigo-600 to-indigo-700',
             description: 'Complete franchise development services including master business plans, financial models, and franchisee acquisition strategies.',
             features: ['Franchisor Master Business Plan', 'Financial Modeling', 'Franchisee Pitch Decks', 'Operations Manuals'],
-            href: '/services/franchise'
+            href: '/services/small-business/franchisor'
         }
     ];
 

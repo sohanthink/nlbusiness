@@ -77,20 +77,7 @@ const Navbar = () => {
     const menuItems = [
         { name: "Home", href: "/" },
         { name: "About Us", href: "/about" },
-
-        // {
-        //     name: "Pages",
-        //     href: "#",
-        //     submenu: [
-        //         { name: "About Us", href: "/about" },
-        //         { name: "Our Team", href: "/teams" },
-        //         { name: "Contact Us", href: "/contact" },
-        //         { name: "Testimonials", href: "/testimonials" },
-        //         { name: "Blog", href: "/blogs" },
-        //         { name: "Careers", href: "/careers" },
-        //         { name: "Our Events", href: "/events" },
-        //     ],
-        // },
+        { name: "Services", href: "/services" },
         { name: "Blog", href: "/blogs" },
         { name: "Contact Us", href: "/contact" },
     ];
@@ -628,7 +615,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Mobile menu button */}
+                    {/* Mobile menu button (Hamburger/X) */}
                     <button
                         onClick={toggleMenu}
                         className="lg:hidden relative p-2 text-black hover:text-gray-300 focus:outline-none transition-colors duration-300 z-50"
@@ -636,189 +623,83 @@ const Navbar = () => {
                         aria-expanded={isMenuOpen}
                     >
                         <div className="relative w-6 h-6">
-                            <span
-                                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? "rotate-45 top-3" : "top-1"
-                                    }`}
-                            ></span>
-                            <span
-                                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? "opacity-0" : "top-3"
-                                    }`}
-                            ></span>
-                            <span
-                                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? "-rotate-45 top-3" : "top-5"
-                                    }`}
-                            ></span>
+                            {isMenuOpen ? (
+                                // X icon when menu is open
+                                <>
+                                    <span className="absolute block h-0.5 w-6 bg-current top-3 left-0 transform rotate-45"></span>
+                                    <span className="absolute block h-0.5 w-6 bg-current top-3 left-0 transform -rotate-45"></span>
+                                </>
+                            ) : (
+                                // Hamburger icon when menu is closed
+                                <>
+                                    <span className="absolute block h-0.5 w-6 bg-current top-1"></span>
+                                    <span className="absolute block h-0.5 w-6 bg-current top-3"></span>
+                                    <span className="absolute block h-0.5 w-6 bg-current top-5"></span>
+                                </>
+                            )}
                         </div>
                     </button>
                 </div>
 
-                {/* Mobile Menu Overlay */}
-                {isMenuOpen && (
-                    <div
-                        className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
-                        onClick={closeMenu}
-                    ></div>
-                )}
 
                 {/* Mobile Menu */}
-                <div
-                    className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-                        } overflow-y-auto`}
-                >
-                    <div className="p-6 pt-20">
-                        {/* Mobile Menu Items */}
-                        <div className="space-y-1">
-                            {menuItems.map((item) => (
-                                <div key={item.name}>
-                                    {item.submenu ? (
-                                        <div>
-                                            <button
-                                                onClick={() => toggleSubmenu(item.name)}
-                                                className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
-                                            >
-                                                {item.name}
-                                                <FaChevronDown
-                                                    className={`text-sm transform transition-transform duration-300 ${activeSubmenu === item.name ? "rotate-180" : ""
-                                                        }`}
-                                                />
-                                            </button>
-                                            <div
-                                                className={`overflow-hidden transition-all duration-300 ${activeSubmenu === item.name
-                                                    ? "max-h-96 opacity-100"
-                                                    : "max-h-0 opacity-0"
-                                                    }`}
-                                            >
-                                                <div className="pl-4 py-2 space-y-1">
-                                                    {item.submenu.map((sub) => (
-                                                        <Link
-                                                            key={sub.name}
-                                                            href={sub.href}
-                                                            className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                                                            onClick={closeMenu}
-                                                        >
-                                                            {sub.name}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <Link
-                                            href={item.href}
-                                            className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
-                                            onClick={closeMenu}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    )}
-                                </div>
-                            ))}
-
-                            {/* Mobile Services Menu */}
-                            <div>
-                                <button
-                                    onClick={() => toggleSubmenu("SERVICES")}
-                                    className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
-                                >
-                                    SERVICES
-                                    <FaChevronDown
-                                        className={`text-sm transform transition-transform duration-300 ${activeSubmenu === "SERVICES" ? "rotate-180" : ""
-                                            }`}
-                                    />
-                                </button>
-                                <div
-                                    className={`overflow-hidden transition-all duration-300 ${activeSubmenu === "SERVICES"
-                                        ? "max-h-[600px] opacity-100"
-                                        : "max-h-0 opacity-0"
-                                        }`}
-                                >
-                                    <div className="pl-4 py-2 space-y-4">
-                                        {/* UK Immigration Mobile */}
-                                        <div>
-                                            <h5 className="text-black mb-2">UK Immigration</h5>
-                                            <div className="space-y-1 pl-2">
-                                                {servicesData.ukImmigration.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                                                        onClick={closeMenu}
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* UAE Immigration Mobile */}
-                                        <div>
-                                            <h5 className="text-black mb-2">UAE Immigration</h5>
-                                            <div className="space-y-1 pl-2">
-                                                {servicesData.uaeImmigration.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                                                        onClick={closeMenu}
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* USA Immigration Mobile */}
-                                        <div>
-                                            <h5 className="text-black mb-2">USA Immigration</h5>
-                                            <div className="space-y-1 pl-2">
-                                                {servicesData.usaImmigration.slice(0, 3).map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                                                        onClick={closeMenu}
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* Advisory Mobile */}
-                                        <div>
-                                            <h5 className="text-black mb-2">Advisory</h5>
-                                            <div className="space-y-1 pl-2">
-                                                {servicesData.advisory.startUp
-                                                    .slice(0, 3)
-                                                    .map((item) => (
-                                                        <Link
-                                                            key={item.name}
-                                                            href={item.href}
-                                                            className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                                                            onClick={closeMenu}
-                                                        >
-                                                            {item.name}
-                                                        </Link>
-                                                    ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                {isMenuOpen && (
+                    <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50">
+                        {/* Mobile Menu Header */}
+                        <div className="flex items-center p-4 border-b border-gray-200 bg-gray-50">
+                            <div className="flex items-center space-x-3">
+                                <Image
+                                    src={logo}
+                                    alt="logo"
+                                    width={30}
+                                    height={30}
+                                    quality={100}
+                                />
+                                <span className="font-bold text-gray-900">Menu</span>
                             </div>
                         </div>
 
-                        {/* Mobile Get Started Button */}
-                        <div className="mt-8 pt-6 border-t border-gray-200">
-                            <Link
-                                href="/"
-                                className="block w-full text-center primary-button px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                                onClick={closeMenu}
-                            >
-                                Get Started
-                            </Link>
+                        <div className="px-4 py-6">
+                            {/* Mobile Menu Items */}
+                            <div className="space-y-2">
+                                {menuItems.map((item) => (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
+                                        onClick={closeMenu}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </div>
+
+                            {/* Mobile Contact Info */}
+                            <div className="mt-6 pt-6 border-t border-gray-200">
+                                <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                                    <div className="flex items-center gap-3 text-gray-700 mb-2">
+                                        <span className="text-sm font-medium">Need help? Call us:</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                        </svg>
+                                        <span className="text-sm font-semibold">1-844 (566-7639)</span>
+                                    </div>
+                                </div>
+
+                                {/* Mobile Get Started Button */}
+                                <Link
+                                    href="/contact"
+                                    className="block w-full text-center bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                    onClick={closeMenu}
+                                >
+                                    Get Free Consultation
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
         </nav>
     );
