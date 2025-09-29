@@ -66,4 +66,13 @@ export const defaultPhrasesToBold = [
   "Québec Entrepreneur Program",
   "Québec Investor Program",
   "franchisor",
+  "advisory",
+  "ROI",
+  "financial model",
+  "pitch deck",
+  "investor business plan",
+  "strategic business plan",
+  "executive summary",
+  "capital raise",
+  "debt financing",
 ];

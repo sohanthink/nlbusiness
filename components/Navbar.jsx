@@ -137,8 +137,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-[90%] absolute mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
-            <div className=" mx-auto px-4 lg:px-2">
+        <nav className="w-[90%] absolute mt-5 md:mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
+            <div className="mx-6 px-4 md:mx-auto">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     {/* Logo - Left Side */}
                     <Link
@@ -645,20 +645,6 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50">
-                        {/* Mobile Menu Header */}
-                        <div className="flex items-center p-4 border-b border-gray-200 bg-gray-50">
-                            <div className="flex items-center space-x-3">
-                                <Image
-                                    src={logo}
-                                    alt="logo"
-                                    width={30}
-                                    height={30}
-                                    quality={100}
-                                />
-                                <span className="font-bold text-gray-900">Menu</span>
-                            </div>
-                        </div>
-
                         <div className="px-4 py-6">
                             {/* Mobile Menu Items */}
                             <div className="space-y-2">
