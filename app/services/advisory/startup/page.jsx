@@ -50,19 +50,19 @@ const StartUpAdvisory = () => {
                     title: "Pitch Deck Development",
                     description: "Investor-ready pitch decks designed to tell your story, showcase your business model, and capture funding opportunities.",
                     alt: "Pitch Deck Services",
-                    href: "/services/startup-advisory#pitch-deck"
+                    href: "/services/advisory/startup/pitch-deck"
                 }}
                 card2={{
                     image: popular2,
-                    title: "Financial Forecasting",
-                    description: "Detailed financial projections and models to demonstrate growth potential and build investor confidence.",
+                    title: "Financial Model",
+                    description: "Comprehensive financial models with detailed projections, cash flow analysis, and scenario planning for startup success.",
                     alt: "Financial Forecasting",
-                    href: "/services/startup-advisory#financial-modeling"
+                    href: "/services/advisory/startup/financial-model"
                 }}
                 centerCard={{
-                    title: "Business Plan Writing",
-                    description: "Comprehensive business plans that articulate your vision, strategy, and execution roadmap for stakeholders and investors.",
-                    href: "/services/startup-advisory#business-plan"
+                    title: "Investor Business Plan",
+                    description: "Professional business plans specifically designed to attract investors and secure funding for your startup.",
+                    href: "/services/advisory/startup/investor-business-plan"
                 }}
                 backgroundImage={popularbanner}
             />

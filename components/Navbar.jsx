@@ -335,33 +335,33 @@ const Navbar = () => {
 
                                             {/* Digital Marketing */}
                                             <div>
-                                                <Link href="/services/advisory/digital-marketing" className="block">
+                                                <Link href="/services/digital-services" className="block">
                                                     <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-blue-600 transition-colors duration-200 cursor-pointer">
-                                                        Digital Marketing
+                                                        Digital Services
                                                     </h4>
                                                 </Link>
                                                 <ul className="space-y-2">
                                                     <li>
                                                         <Link
-                                                            href="/services/advisory/digital-marketing/content-writing"
+                                                            href="/services/advisory/digital-services/website-development"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
                                                         >
-                                                            Content Writing
+                                                            Website Development & Management
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/advisory/digital-marketing/logo-design"
+                                                            href="/services/advisory/digital-services/graphics-design"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200 block py-1"
                                                         >
-                                                            Logo, Images, Design
+                                                            Graphics Design
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/advisory/digital-marketing"
+                                                            href="/services/advisory/digital-services"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >
@@ -456,7 +456,7 @@ const Navbar = () => {
                                             </h3>
                                             {/* Business Plans for Small Business */}
                                             <div>
-                                                <Link href="/services/small-business/business-plans" className="block">
+                                                <Link href="/services/small-business" className="block">
                                                     <h4 className="font-extrabold text-gray-800 mb-2 text-base hover:text-green-600 transition-colors duration-200 cursor-pointer">
                                                         Business Plans for Small Business
                                                     </h4>
