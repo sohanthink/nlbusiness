@@ -75,4 +75,5 @@ export const defaultPhrasesToBold = [
   "executive summary",
   "capital raise",
   "debt financing",
+  "small business",
 ];

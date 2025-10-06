@@ -74,13 +74,13 @@ const SmallBusiness = () => {
                         id: 1,
                         title: "Bank Loan Business Plan",
                         description: "Secure funding with detailed, lender-focused business plans tailored to bank requirements.",
-                        href: "/services/small-business/bank-loan-plan"
+                        href: "/services/small-business/bank-loan-business-plan"
                     },
                     {
                         id: 2,
                         title: "Grant Business Plan",
                         description: "Well-structured grant business plans designed to win government or private funding opportunities.",
-                        href: "/services/small-business/grant-plan"
+                        href: "/services/small-business/grant-business-plan"
                     },
                     {
                         id: 3,
