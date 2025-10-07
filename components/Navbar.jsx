@@ -464,7 +464,7 @@ const Navbar = () => {
                                                 <ul className="space-y-2">
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/business-plans/bank-loan-business-plan"
+                                                            href="/services/small-business/bank-loan-business-plan"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
                                                         >
@@ -473,7 +473,7 @@ const Navbar = () => {
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/business-plans/grant-business-plan"
+                                                            href="/services/small-business/grant-business-plan"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
                                                         >
@@ -482,7 +482,7 @@ const Navbar = () => {
                                                     </li>
                                                     <li>
                                                         <Link
-                                                            href="/services/small-business/business-plans/landlord-deck"
+                                                            href="/services/small-business/landlord-deck"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-green-600 transition-colors duration-200 block py-1"
                                                         >

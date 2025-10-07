@@ -49,19 +49,19 @@ const SmallBusiness = () => {
                     title: "Bank Loan Business Plans",
                     description: "Professional, lender-ready business plans that meet bank requirements and maximize your approval chances.",
                     alt: "Bank Loan Business Plan",
-                    href: "/services/small-business#bank-loan"
+                    href: "/services/small-business/bank-loan-business-plan"
                 }}
                 card2={{
                     image: popular2,
                     title: "Investor Presentations",
                     description: "Compelling investor presentations that highlight your business potential and attract funding.",
                     alt: "Investor Presentation",
-                    href: "/services/small-business#investor-presentation"
+                    href: "/services/small-business/investor-presentation"
                 }}
                 centerCard={{
                     title: "Financial Models",
                     description: "Accurate, transparent financial models for small and midsize businesses to forecast growth and profitability.",
-                    href: "/services/small-business#financial-model"
+                    href: "/services/small-business/financial-model"
                 }}
             />
 
@@ -116,7 +116,7 @@ const SmallBusiness = () => {
                         id: 8,
                         title: "Non-Profit Business Plans",
                         description: "Impact-driven business plans for non-profits to win grants, donors, and stakeholder support.",
-                        href: "/services/small-business/nonprofit-plan"
+                        href: "/services/small-business/nonprofit-business-plan"
                     }
                 ]}
             />
