@@ -74,7 +74,7 @@ const MAFirms = () => {
                         id: 1,
                         title: "Confidential Information Memorandum (CIM)",
                         description: "Full CIM preparation, including financials, operations, and strategic positioning.",
-                        href: "/services/ma-firms/cim"
+                        href: "/services/advisory/ma/cim"
                     },
                     {
                         id: 2,
