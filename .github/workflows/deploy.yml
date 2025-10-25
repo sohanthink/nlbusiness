@@ -1,0 +1,53 @@
+name: Deploy Next.js to VPS (nlbusiness)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code (for logging)
+        uses: actions/checkout@v4
+
+      - name: Connect to VPS and Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+
+          # The commands to run on your server
+          script: |
+            # Source NVM to find Node.js
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            
+            # Go to your project directory
+            cd /var/www/nlbusiness
+            
+            # Pull the latest code
+            git pull origin main
+            
+            # --- THIS IS THE SECTION THAT HANDLES YOUR .env FILE ---
+            # It checks if the secret you created is empty or not.
+            if [ -n "${{ secrets.VPS_ENV_FILE }}" ]; then
+              echo "Creating .env.local file..."
+              echo "${{ secrets.VPS_ENV_FILE }}" > .env.local
+            else
+              echo "No .env file secret found. Skipping."
+            fi
+            # --------------------------------------------------------
+            
+            # Install any new packages
+            npm ci
+            
+            # Build your Next.js app (it will now see the .env.local file)
+            npm run build
+            
+            # Restart your app in PM2
+            pm2 restart nlbusiness

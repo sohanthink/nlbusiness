@@ -80,31 +80,31 @@ const MAFirms = () => {
                         id: 2,
                         title: "Buyers List",
                         description: "Customized list of strategic and financial buyers tailored to your industry and goals.",
-                        href: "/services/ma-firms/buyers-list"
+                        href: "/services/advisory/ma/buyers-list"
                     },
                     {
                         id: 3,
                         title: "Opinion of Value",
                         description: "Independent assessment of your business’s value, supporting negotiations and investor confidence.",
-                        href: "/services/ma-firms/opinion-of-value"
+                        href: "/services/advisory/ma/opinion-of-value"
                     },
                     {
                         id: 4,
                         title: "Financial Modeling",
                         description: "Investor-grade financial models with valuation, scenario analysis, and forecasts.",
-                        href: "/services/ma-firms/financial-modeling"
+                        href: "/services/advisory/ma/financial-modeling"
                     },
                     {
                         id: 5,
                         title: "Teaser",
                         description: "Engaging one- or two-page teaser documents to spark buyer and investor interest.",
-                        href: "/services/ma-firms/teaser"
+                        href: "/services/advisory/ma/teaser"
                     },
                     {
                         id: 6,
                         title: "Comprehensive Business Review",
                         description: "In-depth analysis and reporting covering operations, strategy, and financial health.",
-                        href: "/services/ma-firms/comprehensive-review"
+                        href: "/services/advisory/ma/comprehensive-review"
                     }
                 ]}
             />

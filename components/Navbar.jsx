@@ -381,7 +381,7 @@ const Navbar = () => {
                                                 <ul className="space-y-2">
                                                     <li>
                                                         <Link
-                                                            href="/services/advisory/ma/confidential-information-memorandum"
+                                                            href="services/advisory/ma/cim"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
                                                         >
