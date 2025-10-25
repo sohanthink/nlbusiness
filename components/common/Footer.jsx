@@ -9,18 +9,16 @@ import logo from "@/public/logowhite.png";
 const Footer = () => {
     const countries = [
         { name: "United States", url: "/services/usa-immigrations" },
-        { name: "United Kingdom", url: "/services/uk-immigrations" },
+        { name: "United Kingdom", url: "/" },
         { name: "Canada", url: "/services/canada-immigrations" },
-        { name: "New Zealand", url: "/services/new-zealand-immigrations" },
-        { name: "Singapore", url: "/services/singapore-immigrations" }
     ];
 
     const visaTypes = [
-        "Students Visa",
-        "Business Visa",
-        "Family Visa",
-        "Travel Visa",
-        "Work Visa"
+        "M&A",
+        "Real Estate",
+        "Franchise",
+        "Investment",
+        "Business Consulting & Development",
     ];
 
     const socialIcons = [
@@ -61,7 +59,7 @@ const Footer = () => {
                             </div>
 
                             <p className="text-gray-300 text-sm leading-relaxed">
-                                Emigre Law Chambers provides the simplest solution for processing your all types of visa.
+                                NL Business Venture provides comprehensive business solutions for M&A, real estate, franchise development, and strategic planning.
                             </p>
 
                             {/* Social Media Icons */}
@@ -100,7 +98,7 @@ const Footer = () => {
 
                         {/* Visa Types */}
                         <div className="space-y-4">
-                            <h3 className="font-bold text-lg mb-4">Visas Types</h3>
+                            <h3 className="font-bold text-lg mb-4">Business Types</h3>
                             <ul className="space-y-2">
                                 {visaTypes.map((visa, index) => (
                                     <li key={index}>
@@ -121,15 +119,15 @@ const Footer = () => {
                             <div className="space-y-3">
                                 <div className="flex items-center space-x-3">
                                     <FaEnvelope className="text-gray-400 text-sm" />
-                                    <span className="text-gray-300 text-sm">emigrelaw@gmail.com</span>
+                                    <a href="mailto:info@nlbusinessventure.ca" className="text-gray-300 text-sm hover:text-white transition-colors duration-300">info@nlbusinessventure.ca</a>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <FaPhone className="text-gray-400 text-sm" />
-                                    <span className="text-gray-300 text-sm">0313-1444-125</span>
+                                    <a href="tel:+14372565623" className="text-gray-300 text-sm hover:text-white transition-colors duration-300">+1 (437) 256-5623</a>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <FaMapMarkerAlt className="text-gray-400 text-sm mt-1" />
-                                    <span className="text-gray-300 text-sm">High Q Tower jail road lahore</span>
+                                    <span className="text-gray-300 text-sm"><span className="text-gray-300 text-sm">2229 Kingston Rd, Scarborough, ON M1N 1T8. Canada.</span></span>
                                 </div>
                             </div>
                         </div>
@@ -154,22 +152,33 @@ const Footer = () => {
                 {/* Bottom Copyright Bar */}
                 <div>
                     <div className="container py-6">
-                        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                            <div className="text-gray-400 text-sm">
-                                Emigre Law Chambers © 2025 All Right Reserved
-                            </div>
-                            <div className="flex items-center space-x-4 text-gray-400 text-sm">
-                                <a href="#" className="hover:text-white transition-colors duration-300">
-                                    License Agreements
-                                </a>
-                                <div className="w-px h-4 bg-gray-600"></div>
-                                <a href="#" className="hover:text-white transition-colors duration-300">
-                                    Privacy Policy
-                                </a>
-                                <div className="w-px h-4 bg-gray-600"></div>
-                                <a href="#" className="hover:text-white transition-colors duration-300">
-                                    Terms & Conditions
-                                </a>
+                        <div className="flex flex-col space-y-4">
+                            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                                <div className="text-gray-400 text-sm">
+                                    nlbusinessventure.ca © 2025 All Right Reserved || Website created and managed by{' '}
+                                    <Link
+                                        href="https://sohanthink.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-white transition-colors duration-300 text-green-500"
+                                    >
+                                        sohanthink.com
+                                    </Link>
+                                </div>
+                                <div className="flex items-center space-x-4 text-gray-400 text-sm">
+                                    <a href="#" className="hover:text-white transition-colors duration-300">
+                                        License Agreements
+                                    </a>
+                                    <div className="w-px h-4 bg-gray-600"></div>
+                                    <a href="#" className="hover:text-white transition-colors duration-300">
+                                        Privacy Policy
+                                    </a>
+                                    <div className="w-px h-4 bg-gray-600"></div>
+                                    <a href="#" className="hover:text-white transition-colors duration-300">
+                                        Terms & Conditions
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
