@@ -9,18 +9,18 @@ const Banner2 = () => {
     const services = [
         {
             icon: <IoGlobeOutline className="w-8 h-8" />,
-            title: "Global Immigration",
-            description: "Expert guidance for Canada, USA, and worldwide immigration programs"
+            title: "M&A Advisory",
+            description: "Strategic guidance for mergers, acquisitions, and business transactions"
         },
         {
             icon: <IoPeopleOutline className="w-8 h-8" />,
-            title: "Business Plans",
-            description: "Professional business plans tailored for visa applications and success"
+            title: "Business Consulting",
+            description: "Comprehensive business solutions for growth and strategic planning"
         },
         {
             icon: <IoShieldCheckmarkOutline className="w-8 h-8" />,
-            title: "Visa Success",
-            description: "Proven track record of helping entrepreneurs achieve their dreams"
+            title: "Financial Modeling",
+            description: "Professional financial models and valuation analysis for strategic decisions"
         }
     ];
     // bg-gradient-to-br from-slate-50 via-white to-purple-50
@@ -47,13 +47,13 @@ const Banner2 = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Your Journey to
+                        Strategic Business
                         <span className="block bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
-                            Global Success
+                            Excellence
                         </span>
                     </h1>
                     <p className="text-xl text-gray max-w-3xl mx-auto leading-relaxed">
-                        Experts in investor business plans, startup visa documentation, and strategic immigration planning.
+                        Professional M&A advisory, business consulting, and financial modeling services to accelerate your company's growth and maximize value.
                     </p>
                 </motion.div>
 
@@ -91,13 +91,13 @@ const Banner2 = () => {
                     <Button
                         link="#consultation"
                         cn="primary-button text-lg px-8 py-4"
-                        text="Get Free Strategy Session"
+                        text="Schedule Strategic Consultation"
                     />
                     <Link
                         href="/services"
                         className="flex items-center gap-2 text-gray hover:text-black font-semibold transition-colors duration-300"
                     >
-                        Explore Our Services
+                        View Our Services
                         <IoArrowForward />
                     </Link>
                 </motion.div>

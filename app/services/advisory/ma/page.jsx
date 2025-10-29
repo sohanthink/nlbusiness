@@ -14,8 +14,10 @@ import PopularVisa from '@/components/service/usimmigration/PopularVisa'
 // images (replace with your actual ones later)
 import banner from "@/public/images/services/advisory/ma/banner.png";
 import secretbanner from "@/public/images/services/advisory/ma/secret.png";
-import popular1 from "@/public/images/services/advisory/ma/popular1.png";
-import popular2 from "@/public/images/services/advisory/ma/popular2.png";
+
+import financialModelingBanner from "@/public/images/services/advisory/ma/financial-modeling/banner.png";
+import cimBanner from "@/public/images/services/advisory/ma/cim/cim-banner.png";
+
 
 const MAFirms = () => {
     return (
@@ -45,14 +47,14 @@ const MAFirms = () => {
                 title="Popular M&A Services"
                 description="Our most requested services for M&A professionals and firms."
                 card1={{
-                    image: popular1,
+                    image: cimBanner,
                     title: "Confidential Information Memorandum (CIM)",
                     description: "Comprehensive CIMs designed to present your business clearly and attract qualified buyers.",
                     alt: "Confidential Information Memorandum",
                     href: "/services/ma-firms/cim"
                 }}
                 card2={{
-                    image: popular2,
+                    image: financialModelingBanner,
                     title: "Financial Modeling",
                     description: "Detailed models and valuations to support negotiations, investor presentations, and due diligence.",
                     alt: "Financial Modeling",
@@ -61,7 +63,7 @@ const MAFirms = () => {
                 centerCard={{
                     title: "Buyers List",
                     description: "Strategically prepared buyers lists to identify, target, and engage potential acquirers.",
-                    href: "/services/ma-firms/buyers-list"
+                    href: "/services/advisory/ma/buyers-list"
                 }}
             />
 
@@ -104,7 +106,7 @@ const MAFirms = () => {
                         id: 6,
                         title: "Comprehensive Business Review",
                         description: "In-depth analysis and reporting covering operations, strategy, and financial health.",
-                        href: "/services/advisory/ma/comprehensive-review"
+                        href: "/services/advisory/ma/comprehensive-business-review"
                     }
                 ]}
             />

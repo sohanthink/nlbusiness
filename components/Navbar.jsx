@@ -137,7 +137,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-[90%] absolute mt-5 md:mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
+        <nav className="w-[90%] fixed mt-5 md:mt-10 bg-white rounded-lg top-0 z-50 duration-50 bg-dark left-1/2 transform -translate-x-1/2" ref={menuRef}>
             <div className="mx-6 px-4 md:mx-auto">
                 <div className="flex justify-between items-center h-16 md:h-20">
                     {/* Logo - Left Side */}
@@ -381,7 +381,7 @@ const Navbar = () => {
                                                 <ul className="space-y-2">
                                                     <li>
                                                         <Link
-                                                            href="services/advisory/ma/cim"
+                                                            href="/services/advisory/ma/cim"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-gray-700 hover:text-purple-600 transition-colors duration-200 block py-1"
                                                         >
