@@ -18,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://nlbusinessventure.ca/"),
   title:
     "Business Venture Canada - Expert Immigration Business Plans & Visa Services",
   description:
@@ -52,13 +53,17 @@ export const metadata = {
       "Professional business plans for Canadian, US, and global immigration programs.",
     images: ["/logo.png"],
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#7651a6",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#7651a6",
 };
 
 export default function RootLayout({ children }) {

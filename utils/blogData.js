@@ -31,7 +31,7 @@ export const blogPosts = [
       name: "Sarah Mitchell",
       role: "Immigration Strategist",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b442?w=40&h=40&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1494790108755-2616b612b442?w=40&h=40&fit=crop",
     },
     category: "US Immigration",
     tags: ["EB-5", "Investor Visa", "Green Card", "Immigration"],
@@ -67,7 +67,7 @@ export const blogPosts = [
       name: "Michael Chen",
       role: "Business Consultant",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop",
     },
     category: "Canadian Immigration",
     tags: ["Start-Up Visa", "Canada", "Business Plan", "Entrepreneurship"],
@@ -103,7 +103,7 @@ export const blogPosts = [
       name: "Emily Rodriguez",
       role: "Financial Analyst",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop",
     },
     category: "Business Planning",
     tags: ["PNP", "Provincial Nominee", "Business Plan", "Canada"],
@@ -217,7 +217,7 @@ export const blogPosts = [
       name: "David Thompson",
       role: "Web Development Specialist",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop",
     },
     category: "Small Business",
     tags: [
