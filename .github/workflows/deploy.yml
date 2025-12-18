@@ -28,7 +28,7 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             
             # Go to your project directory
-            cd /var/www/nlbusiness
+            cd /var/www/amjad/nlbusiness
             
             # Pull the latest code
             git pull origin main
