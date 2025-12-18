@@ -350,7 +350,7 @@ const Navbar = () => {
                                                             Website Development & Management
                                                         </Link>
                                                     </li>
-                                                    <li>
+                                                    {/* <li>
                                                         <Link
                                                             href="/services/advisory/digital-services/graphics-design"
                                                             onClick={handleMegaMenuItemClick}
@@ -358,10 +358,10 @@ const Navbar = () => {
                                                         >
                                                             Graphics Design
                                                         </Link>
-                                                    </li>
+                                                    </li> */}
                                                     <li>
                                                         <Link
-                                                            href="/services/advisory/digital-services"
+                                                            href="/services/digital-services"
                                                             onClick={handleMegaMenuItemClick}
                                                             className="text-sm text-red-600 hover:text-red-700 font-medium block py-1"
                                                         >
